@@ -1,0 +1,11 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+[git-ftp "wedede git ftp"]
+	url = ftp://wedede.net/
+	user = mike
+	password = emir1281
