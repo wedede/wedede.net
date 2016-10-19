@@ -19,7 +19,21 @@
 </head>
 
 <body>
-
+<a href="#example" id='m' ></a>
+<aside id="example" class="modal">
+		<div>
+			<h2>Подтверждение ставки</h2>
+			<h2><? echo $e[Lot_Name]; ?></h2>
+			<h1>Вы действительно хотите сделать ставку в размере <span id='modal_value'></span> грн ?
+			<br>Нажимая да вы соглашаетесь с <a href='rules.php' target='_blank'>правилами</a> аукциона.
+			</h1>
+			<div class='show_modal_buttons'>
+			<button id="modal_no" class="bid_button" onclick="document.getElementById('close_modale').click();">нет</button>
+			<button id="modal_ok" class="bid_button" onclick="document.getElementById('create').submit(true);">Да</button>
+			</div>
+			<a href="#close" id='close_modale' title="Закрыть">Закрыть</a>
+		</div>
+	</aside>
 
 
     <div class="navbar-fixed">
