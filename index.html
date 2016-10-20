@@ -16,10 +16,49 @@
     <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
     <link rel="stylesheet" href="font-asesome/css/font-awesome.min.css">
+
+    <!--  Scripts-->
+
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
+
 </head>
 
 <body>
 
+<!--modal window-->
+<div id="modal" class="modal">
+    <div class="modal-content">
+      <h4>Заказ</h4>
+      <p>Введите ваши данные и мы с вами обязательно свяжемся</p>
+         <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="Ваше имя" id="first_name" type="text" class="validate">
+          <label for="first_name">Имя</label>
+        </div>
+      </div>
+    <div class="row">
+        <div class="input-field col s12">
+          <input id="tel" type="tel" class="validate">
+          <label for="tel">Телефон</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate">
+          <label for="email">Email</label>
+        </div>
+      </div>
+    </form>
+  </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">ok</a>
+    </div>
+  </div>
 
 
     <div class="navbar-fixed">
@@ -74,7 +113,7 @@
                     <h5 class="header col s12 light">Чай, кофе, сайт?</h5>
                 </div>
                 <div class="row center">
-                    <a href="order.html" id="download-button" class="btn-large waves-effect waves-light orange">Заказать сайт</a>
+                    <a href="#modal" class="btn-large waves-effect waves-light orange modal-trigger modal-close ">Заказать сайт</a>
                 </div>
                 <br>
                 <br>
@@ -476,12 +515,6 @@
         </div>
 
     </footer>
-
-
-    <!--  Scripts-->
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="js/materialize.js"></script>
-    <script src="js/init.js"></script>
 
 </body>
 
