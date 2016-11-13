@@ -2776,7 +2776,7 @@ video.responsive-video {
 .parallax img {
   display: none;
   position: absolute;
-    top: -30%;
+    top: -40%;
   left: 50%;
   bottom: 0;
   min-width: 100%;
