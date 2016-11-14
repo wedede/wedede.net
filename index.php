@@ -1,4 +1,4 @@
-<?php
+<?
 require_once('geoip.php');
 
 $geoplugin = new geoPlugin();
@@ -8,13 +8,13 @@ $geoplugin->locate();
 $var_country_code = $geoplugin->countryCode;
 
 $ru_array = array("AM", "AZ", "BY", "GE", "KZ","MD","RU","TJ","TM","UA");
-//Àðìåíèÿ,Àçåðáàéäæàí,Áåëàðóñü,Ãðóçèÿ,Êàçàõñòàí, Ìîëäîâà, Ðîññèÿ,Òàäæèêèñòàí,Òóðêìåíèñòàí, Óêðàèíà
+//ÐÑ€Ð¼ÐµÐ½Ð¸Ñ,ÐÐ·ÐµÑ€Ð±Ð°Ð¹Ð´Ð¶Ð°Ð½,Ð‘ÐµÐ»Ð°Ñ€ÑƒÑÑŒ,Ð“Ñ€ÑƒÐ·Ð¸Ñ,ÐšÐ°Ð·Ð°Ñ…ÑÑ‚Ð°Ð½, ÐœÐ¾Ð»Ð´Ð¾Ð²Ð°, Ð Ð¾ÑÑÐ¸Ñ,Ð¢Ð°Ð´Ð¶Ð¸ÐºÐ¸ÑÑ‚Ð°Ð½,Ð¢ÑƒÑ€ÐºÐ¼ÐµÐ½Ð¸ÑÑ‚Ð°Ð½, Ð£ÐºÑ€Ð°Ð¸Ð½Ð°
 
 // redirect based on country code:
 if (in_array($var_country_code, $ru_array)) {
-header('Location:index-ru.html');
+header('Location:/ru/');
 }
 else {
-header('Location:index-eng.html');
+header('Location:/eng/');
 }
 ?>
