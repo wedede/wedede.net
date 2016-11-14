@@ -12,9 +12,9 @@ $ru_array = array("AM", "AZ", "BY", "GE", "KZ","MD","RU","TJ","TM","UA");
 
 // redirect based on country code:
 if (in_array($var_country_code, $ru_array)) {
-header('Location:/ru/');
+header('Location:./ru');
 }
 else {
-header('Location:/eng/');
+header('Location:./eng');
 }
 ?>
