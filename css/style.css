@@ -99,3 +99,24 @@ footer.page-footer {
   padding:10px !important;
 box-sizing: initial;
 }
+.collapse h2::after{
+  content: "+";
+  text-align:center;
+  position:absolute;
+  width:15px;
+  height:15px;
+  border:1px solid #ccc;
+  border-radius:50%;
+  font-size:12px;
+  line-height:15px;
+  opacity:0.5;
+  right:0;
+  top:0;
+}
+.collapse:hover h2::after{
+  opacity:1
+}
+
+.collapse.active h2::after{
+  content: "-";
+}
