@@ -4,6 +4,11 @@
     $('.button-collapse').sideNav();
     $('.parallax').parallax();
 
+       $('.collapse').on('click',function(e){
+  e.preventDefault();
+  $(this).toggleClass('active');
+});
+
     $(".jump").on("click", function (event)
      {
         event.preventDefault();
