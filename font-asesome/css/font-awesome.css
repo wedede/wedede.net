@@ -630,6 +630,10 @@
 .fa-facebook-f:before,
 .fa-facebook:before {
   content: "\f09a";
+    -webkit-transition: color 0.3s ease;
+}
+.fa-facebook:hover {
+  color: rgb(138, 138, 138);
 }
 .fa-github:before {
   content: "\f09b";
@@ -767,6 +771,10 @@
 }
 .fa-google-plus:before {
   content: "\f0d5";
+    -webkit-transition: color 0.3s ease;
+}
+.fa-google-plus:hover {
+  color: rgb(138, 138, 138);
 }
 .fa-money:before {
   content: "\f0d6";
@@ -1217,6 +1225,10 @@
 }
 .fa-instagram:before {
   content: "\f16d";
+    -webkit-transition: color 0.3s ease;
+}
+.fa-instagram:hover {
+  color: rgb(138, 138, 138);
 }
 .fa-flickr:before {
   content: "\f16e";
@@ -1296,6 +1308,10 @@
 }
 .fa-vk:before {
   content: "\f189";
+    -webkit-transition: color 0.3s ease;
+}
+.fa-vk:hover {
+  color: rgb(138, 138, 138);
 }
 .fa-weibo:before {
   content: "\f18a";
