@@ -4460,6 +4460,9 @@ small {
   border-radius: 2px;
   background-color: #fff;
 }
+.card-panel:hover {
+    cursor: pointer;
+}
 
 .card {
   position: relative;
