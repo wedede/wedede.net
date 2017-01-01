@@ -13,6 +13,7 @@
 
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
     <link rel="stylesheet" href="font-asesome/css/font-awesome.css">
@@ -35,7 +36,7 @@
     <!--  Scripts-->
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="js/materialize.js"></script>
-    <script src="js/init.js"></script>
+    <script src="js/services_init.js"></script>
 
     <script src="js/wow.min.js"></script>
     <script>
@@ -95,25 +96,25 @@
 
     <div class="row container">
         <div class="col s12 m6 l3">
-            <div class="card-panel z-depth-1 hoverable white">
+            <div class="card-panel z-depth-1 hoverable white"  target='landing'>
                 <span class="grey-text text-darken-4">Посадочная страница
           </span>
             </div>
         </div>
         <div class="col s12 m6 l3">
-            <div class="card-panel z-depth-1 hoverable white">
-                <span class="grey-text text-darken-4">Сайт визитка
+            <div class="card-panel z-depth-1 hoverable white"  target='site'>
+                <span class="grey-text text-darken-4" target='site'>Сайт визитка
           </span>
             </div>
         </div>
         <div class="col s12 m6 l3">
-            <div class="card-panel z-depth-1 hoverable white">
-                <span class="grey-text text-darken-4">Интернет магазин
+            <div class="card-panel z-depth-1 hoverable white"  target='e_commerce'>
+                <span class="grey-text text-darken-4" >Интернет магазин
           </span>
             </div>
         </div>
         <div class="col s12 m6 l3">
-            <div class="card-panel z-depth-1 hoverable white">
+            <div class="card-panel z-depth-1 hoverable white"  target='other'>
                 <span class="grey-text text-darken-4">Прочее
           </span>
             </div>
@@ -139,49 +140,85 @@
     </div>
 
     <div class="row container">
-
-
         <div class="col s3">
             <form action="#">
-                <h6>Услуги</h6>
+            <h6>Услуги</h6>
+            <div id="landing_field" class="dynamic_checkboxes">
                 <p>
-                    <input name="group1" type="checkbox" id="test11" />
-                    <label for="test11">LP Форма обратной связи</label>
+                    <input name="group1" type="checkbox" id="f_1" />
+                    <label for="f_1">LP Форма обратной связи</label>
                 </p>
                 <p>
-                    <input name="group1" type="checkbox" id="test11" />
-                    <label for="test11">VS Форма обратной связи</label>
+                    <input name="group1" type="checkbox" id="f_2" />
+                    <label for="f_2">IS Наполнение</label>
                 </p>
                 <p>
-                    <input name="group1" type="checkbox" id="test11" />
-                    <label for="test11">IS Наполнение</label>
+                    <input name="group1" type="checkbox" id="f_3" />
+                    <label for="f_3">ETS Добавление мобильной версии</label>
+                </p>
+            </div>
+            <div id="site_field" class="dynamic_checkboxes" style='display:none'>
+                <p>
+                    <input name="group1" type="checkbox" id="f_4" />
+                    <label for="f4">Feature 4</label>
                 </p>
                 <p>
-                    <input name="group1" type="checkbox" id="test11" />
-                    <label for="test11">ETS Добавление мобильной версии</label>
+                    <input name="group1" type="checkbox" id="f_5" />
+                    <label for="f_5">Feature 5</label>
                 </p>
-
+                <p>
+                    <input name="group1" type="checkbox" id="f_6" />
+                    <label for="f_6">Etc...</label>
+                </p>
+            </div>
+            <div id="e_commerce_field" class="dynamic_checkboxes" style='display:none'>
+                <p>
+                    <input name="group1" type="checkbox" id="f_7" />
+                    <label for="f_7">Feature 7</label>
+                </p>
+                <p>
+                    <input name="group1" type="checkbox" id="f_8" />
+                    <label for="f_8">Feature 8</label>
+                </p>
+                <p>
+                    <input name="group1" type="checkbox" id="f_9" />
+                    <label for="f_9">Etc...</label>
+                </p>
+            </div>
+            <div id="other_field" class="dynamic_checkboxes" style='display:none'>
+                <p>
+                    <input name="group1" type="checkbox" id="f_10" />
+                    <label for="f_10">Feature 10</label>
+                </p>
+                <p>
+                    <input name="group1" type="checkbox" id="f_11" />
+                    <label for="f_11">Feature 11</label>
+                </p>
+                <p>
+                    <input name="group1" type="checkbox" id="f_12" />
+                    <label for="f_12">Etc...</label>
+                </p>
+            </div>
             </form>
-        </div>
-
+        </div> 
         <div class="col s3">
             <form action="#">
                 <h6>SEO SMM и поддержка</h6>
                 <p>
-                    <input name="group2" type="checkbox" id="test21" />
-                    <label for="test21">SEO</label>
+                    <input name="group2" type="checkbox" id="f_13" />
+                    <label for="f_13">SEO</label>
                 </p>
                 <p>
-                    <input name="group2" type="checkbox" id="test22" />
-                    <label for="test22">SMM</label>
+                    <input name="group2" type="checkbox" id="f_14" />
+                    <label for="f_14">SMM</label>
                 </p>
                 <p>
-                    <input name="group2" type="checkbox" id="test23" />
-                    <label for="test23">Поддержка сайта</label>
+                    <input name="group2" type="checkbox" id="f_15" />
+                    <label for="f_15">Поддержка сайта</label>
                 </p>
                 <p>
-                    <input name="group2" type="checkbox" id="test24" />
-                    <label for="test24">Таргетинг</label>
+                    <input name="group2" type="checkbox" id="f_16" />
+                    <label for="f_16">Таргетинг</label>
                 </p>
             </form>
         </div>
@@ -190,16 +227,16 @@
             <form action="#">
                 <h6>Индивидуальные проекты</h6>
                 <p>
-                    <input name="group3" type="checkbox" id="test31" />
-                    <label for="test31">Продвинутая разработка</label>
+                    <input name="group3" type="checkbox" id="f_17" />
+                    <label for="f_17">Продвинутая разработка</label>
                 </p>
                 <p>
-                    <input name="group3" type="checkbox" id="test32" />
-                    <label for="test32">Интеграция</label>
+                    <input name="group3" type="checkbox" id="f_18" />
+                    <label for="f_18">Интеграция</label>
                 </p>
                 <p>
-                    <input name="group3" type="checkbox" id="test33" />
-                    <label for="test33">Дополнительный функционал</label>
+                    <input name="group3" type="checkbox" id="f_19" />
+                    <label for="f_19">Дополнительный функционал</label>
                 </p>
 
             </form>
@@ -209,20 +246,20 @@
             <form action="#">
                 <h6>Услуги дизайна</h6>
                 <p>
-                    <input name="group4" type="checkbox" id="test41" />
-                    <label for="test41">Разработка логотипа</label>
+                    <input name="group4" type="checkbox" id="f_20" />
+                    <label for="f_20">Разработка логотипа</label>
                 </p>
                 <p>
-                    <input name="group4" type="checkbox" id="test42" />
-                    <label for="test42">Нейминг</label>
+                    <input name="group4" type="checkbox" id="f_21" />
+                    <label for="f_21">Нейминг</label>
                 </p>
                 <p>
-                    <input name="group4" type="checkbox" id="test43" />
-                    <label for="test43">Айдентика</label>
+                    <input name="group4" type="checkbox" id="f_22" />
+                    <label for="f_22">Айдентика</label>
                 </p>
                 <p>
-                    <input name="group4" type="checkbox" id="test44" />
-                    <label for="test44">Оформление групп в социальных сетях</label>
+                    <input name="group4" type="checkbox" id="f_23" />
+                    <label for="f_23">Оформление групп в социальных сетях</label>
                 </p>
             </form>
         </div>
@@ -252,17 +289,20 @@
 
 
 
-
-
     <!-- Divider 50px -->
-    <div class="row" style="height: 50px;">
-        <div class="col s12"></div>
+    <div class="row container" style="height: 50px;" id='summary'>
+        <div class="col s12" id='main_feature'>
+        </div>
+        <div class="col s12" id='optional_features'>
+        </div>
     </div>
     <div class="container">
         <div class="divider"></div>
     </div>
-    <div class="row" style="height: 50px;">
-        <div class="col s12"></div>
+    <div class="row container" style="height: 50px;">
+        <div class="col s12">
+            <h2><span class='right' id='amount'></span></h2>
+        </div>
     </div>
 
 
