@@ -16,5 +16,14 @@
         t = $(i).offset().top;
         $('body,html').animate({scrollTop: t}, 2000, 'easeOutExpo');
     });
+      
+      
+      
+      $('.card-panel').click(function ()
+      {
+        $('.card-panel').removeClass('active');
+          $(this).addClass('active');
+        
+      });
   }); // end of document ready
 })(jQuery); // end of jQuery name space
