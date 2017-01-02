@@ -2,7 +2,8 @@
   $(function(){
 
     $('.button-collapse').sideNav();
-  
+    $('#modal_email').modal();     
+    
     $(".jump").on("click", function (event)
      {
         event.preventDefault();
@@ -94,10 +95,11 @@ function calculate()
       $('#send_order').click(function()
       {
           Materialize.toast('Отправка заказа...',60000);
-          $.post( "mail.php", { data:'data'})
+          $.post( "mail.php", { data:$('#order_data').html()})
 		.done(function( returned_data ) 
 		{	
 			$('.toast').remove(); 
+              
 			if(returned_data.result=='sended') 
 			{	
                 Materialize.toast('Спасибо за заказ', 4000);
@@ -113,6 +115,6 @@ function calculate()
 			Materialize.toast('Ошибка отправки', 4000);
 		})
       });
-      
+ 
   }); // end of document ready
 })(jQuery); // end of jQuery name space

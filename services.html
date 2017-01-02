@@ -48,6 +48,22 @@
 
 <body class="grey lighten-5 grey-text text-darken-4">
 
+<!--Модальное окно email-->
+<div id="modal_email" class="modal">
+    <div class="modal-content">
+		<h4>Email</h4>
+		<p>Оставьте пожалуйста ваш контактный e-mail для связи с вами</p>
+		<div class="row">
+			<div class="input-field col s12">
+				<input id="email_field" placeholder="e-mail">
+			</div>
+		</div>
+	</div>
+	<div class="modal-footer">
+			<a href="#" class="modal-action modal-close waves-effect btn-flat">отменить</a>
+			<button class="waves-effect modal-close btn-flat" id="send_order">отправить</button>
+	</div>
+</div>
 
 
 
@@ -290,6 +306,7 @@
 
 
     <!-- Divider 50px -->
+    <div id='order_data'>
     <div class="row container" style="height: 50px;" id='summary'>
         <div class="col s12" id='main_feature'>
         </div>
@@ -304,9 +321,10 @@
             <h2><span class='right' id='amount'></span></h2>
         </div>
     </div>
+    </div>
     <div class="row container" style="height: 50px;">
         <div class="col s12">
-            <span class='right'><button class="btn-flat right" id="send_order">Заказать</button></span>
+            <span class='right'><button class="btn-flat right" data-target="modal_email">Заказать</button></span>
         </div>
     </div>
 
