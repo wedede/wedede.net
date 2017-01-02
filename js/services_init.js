@@ -23,7 +23,7 @@
           $('#'+$(this).attr('target')+'_field').show().addClass('animated zoomIn');
           
           $('#main_feature').remove();
-          $('#summary').prepend("<div class='col s12' id='main_feature'><h4>"+$(this).children('span').html()+"<span class='right'><span class='amount'>100</span> грн.</span></h4></div>");
+          $('#summary').prepend("<div class='col s12' id='main_feature'><h4>"+$(this).children('span').html()+"<span class='right'><span class='amount'>"+$(this).data('price')+"</span> грн.</span></h4></div>");
           calculate();
         
       });
@@ -39,7 +39,7 @@
           
           if($(this).prop('checked'))
           {
-               $('#optional_features').prepend("<h6 id='feature_"+item_id+"'>"+$(this).next('label').text()+"<span class='right'><span class='amount'>100</span> грн."+close_button+"</span></h6>");
+               $('#optional_features').prepend("<h6 id='feature_"+item_id+"'>"+$(this).next('label').text()+"<span class='right'><span class='amount'>"+$(this).data('price')+"</span> грн."+close_button+"</span></h6>");
                $('#feature_'+item_id).addClass('animated flipInX').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () 
                {
                     $('#feature_'+item_id).removeClass('animated flipInX');
@@ -90,6 +90,29 @@ function calculate()
     });
 
 }
+      
+      $('#send_order').click(function()
+      {
+          Materialize.toast('Отправка заказа...',60000);
+          $.post( "mail.php", { data:'data'})
+		.done(function( returned_data ) 
+		{	
+			$('.toast').remove(); 
+			if(returned_data.result=='sended') 
+			{	
+                Materialize.toast('Спасибо за заказ', 4000);
+			}
+            if(returned_data.result=='limit') 
+			{	
+                Materialize.toast('Закза был отослан ранее', 4000);
+			}
+			console.log(returned_data);
+		})
+		.fail(function() 
+		{
+			Materialize.toast('Ошибка отправки', 4000);
+		})
+      });
       
   }); // end of document ready
 })(jQuery); // end of jQuery name space
