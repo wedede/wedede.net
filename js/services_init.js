@@ -16,15 +16,60 @@
       
       $('.card-panel').click(function ()
       {
-        $('.card-panel').removeClass('active');
+        if($(this).hasClass('active'))
+        {
+            $('#'+$(this).attr('target')+'_field').hide();
+            $(this).removeClass('active');
+            $('#main_feature').remove();
+        $('#'+$(this).attr('target')+'_field').children().children('input[type="checkbox"]').each(function(){
+               $(this).prop( "checked", false );
+                var id=$(this).next('label').attr('for');
+                id = id.split("_");
+                id=id[1];
+
+                $('#feature_'+id).addClass('animated flipOutX').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function ()
+               {
+                   $('#feature_'+id).remove();
+                   calculate();
+                });
+
+            });
+
+        }
+        else
+        {
+
+          var unclicked_id=$('.active').attr('target');
+          $('.card-panel').removeClass('active');
+
           $(this).addClass('active');
-          $(this).children("span").addClass('blue-text');
+          //$(this).children("span").addClass('blue-text');
           
           $('.dynamic_checkboxes').hide();
           $('#'+$(this).attr('target')+'_field').show().addClass('animated zoomIn');
           
           $('#main_feature').remove();
-          $('#summary').prepend("<div class='col s12' id='main_feature'><h4>"+$(this).children('span').html()+"<span class='right'><span class='amount'>"+$(this).data('price')+"</span> грн.</span></h4></div>");
+          $('#summary').prepend("<div class='col s12' id='main_feature'><h6>"+$(this).children('span').html()+"<span class='right'><span class='amount'>"+$(this).data('price')+"</span> грн.</span></h6></div>");
+
+
+
+         $('#'+unclicked_id+'_field').children().children('input[type="checkbox"]').each(function(){
+               $(this).prop( "checked", false );
+                var id=$(this).next('label').attr('for');
+                id = id.split("_");
+                id=id[1];
+
+                $('#feature_'+id).addClass('animated flipOutX').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function ()
+               {
+                   $('#feature_'+id).remove();
+                   calculate();
+                });
+
+            });
+
+
+        }
+
           calculate();
         
       });
@@ -36,7 +81,7 @@
             var item_id=$(this).attr('id');
             item_id = item_id.split("_");
             item_id=item_id[1];
-            var close_button="<i class='material-icons tiny' style='padding-left:1rem;cursor:pointer;' id='remove_"+item_id+"'>close</i>";
+            var close_button="<i class='fa fa-times red-text' aria-hidden='true' style='padding-left:1rem;cursor:pointer;' id='remove_"+item_id+"'></i>";
           
           if($(this).prop('checked'))
           {
@@ -60,7 +105,7 @@
       
       });
     
-      $('#optional_features').on('click', '.material-icons', function()
+      $('#optional_features').on('click', '.fa-times', function()
 	   {
          var item_id=$(this).attr('id');
          item_id = item_id.split("_");
@@ -84,11 +129,12 @@ function calculate()
           {
               amount=amount+parseInt($(this).html());
           });
-    $('#amount').addClass('animated fadeOut').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () 
-    {
-        $('#amount').html(amount).removeClass('animated fadeOut').addClass('animated fadeIn');
-        //$('#amount').html(amount).addClass('animated fadeIn');
-    });
+//    $('#amount').addClass('animated fadeOut').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function ()
+//    {
+//        $('#amount').html(amount).removeClass('animated fadeOut').addClass('animated fadeIn');
+        $('#amount').html(amount);
+    //.addClass('animated fadeIn');
+//    });
 
 }
       

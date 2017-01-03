@@ -4463,7 +4463,10 @@ small {
 .card-panel:hover {
     cursor: pointer;
 }
-
+.card-panel.active {
+     transition: box-shadow .25s;
+        box-shadow: 0 8px 17px 0 rgba(33, 150, 243, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 .card {
   position: relative;
   margin: 0.5rem 0 1rem 0;
