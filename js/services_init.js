@@ -94,7 +94,15 @@ function calculate()
       
       $('#send_order').click(function()
       {
+         var options=[];
+         $('.amount').each(function()
+          {
+             options.push(parseInt($(this).html()));
+         });
+          
+          console.log(options);
           Materialize.toast('Отправка заказа...',60000);
+          
           $.post( "mail.php", { data:$('#order_data').html()})
 		.done(function( returned_data ) 
 		{	
