@@ -81,7 +81,7 @@
             var item_id=$(this).attr('id');
             item_id = item_id.split("_");
             item_id=item_id[1];
-            var close_button="<i class='material-icons tiny' style='padding-left:1rem;cursor:pointer;' id='remove_"+item_id+"'>close</i>";
+            var close_button="<i class='fa fa-times red-text' aria-hidden='true' style='padding-left:1rem;cursor:pointer;' id='remove_"+item_id+"'></i>";
           
           if($(this).prop('checked'))
           {
@@ -105,7 +105,7 @@
       
       });
     
-      $('#optional_features').on('click', '.material-icons', function()
+      $('#optional_features').on('click', '.fa-times', function()
 	   {
          var item_id=$(this).attr('id');
          item_id = item_id.split("_");
