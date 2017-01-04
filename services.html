@@ -50,20 +50,21 @@
 
 <!--Модальное окно email-->
 <div id="modal_email" class="modal">
-    <div class="modal-content">
+        <div class="modal-content">
 		<h4>Email</h4>
 		<p>Укажите ваш контактный e-mail для связи с вами</p>
 		<div class="row">
-			<div class="input-field col s12">
-				<input id="email_field" placeholder="e-mail">
-			</div>
-		</div>
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate">
+            <label for="email" data-error="Неправильно" data-success="Правильно">Email</label>
+        </div>
 	</div>
 	<div class="modal-footer">
-			<a href="#" class="modal-action modal-close waves-effect btn-flat">отменить</a>
-			<button class="waves-effect modal-close btn-flat" id="send_order">отправить</button>
+            <button class="modal-close btn-flat" id="send_order">отправить</button>
+			<a href="#" class="modal-action modal-close btn-flat">отменить</a>
 	</div>
-</div>
+    </div>
+    </div>
 
 
 
@@ -75,14 +76,14 @@
 
             <ul class="right hide-on-med-and-down">
                 <li><a href="index.html" class="grey-text text-darken-4">Главная</a></li>
-                <li><a href="services.html" class="grey-text text-darken-4">Услуги</a></li>
+                <li><a href="#gallery" class="grey-text text-darken-4 jump">Портфолио</a></li>
                 <li><a href="#contacts" class="grey-text text-darken-4 jump">Контакты</a></li>
             </ul>
 
             <ul id="nav-mobile" class="side-nav">
-                <li><a href="#" class="center grey-text text-darken-4">Navbar Link</a></li>
-                <li><a href="#" class="center grey-text text-darken-4">Navbar Link</a></li>
-                <li><a href="#" class="center grey-text text-darken-4">Navbar Link</a></li>
+                <li><a href="index.html" class="center grey-text text-darken-4">Главная</a></li>
+                <li><a href="#gallery" class="center grey-text text-darken-4">Портфолио</a></li>
+                <li><a href="#contacts" class="center grey-text text-darken-4">Контакты</a></li>
             </ul>
             <a href="#" data-activates="nav-mobile" class="button-collapse grey-text text-darken-4"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></a>
         </div>
@@ -156,9 +157,9 @@
     </div>
 
     <div class="row container">
-        <div class="col s12 m6 l3">
+        <div class="col s12 m12 l3">
             <form action="#">
-                <h6>SEO SMM и поддержка</h6>
+                <p>SEO SMM и поддержка</p>
                 <p>
                     <input name="group2" type="checkbox" id="f_13" data-price='555' />
                     <label for="f_13">SEO</label>
@@ -178,9 +179,9 @@
             </form>
         </div>
 
-        <div class="col s12 m6 l3">
+        <div class="col s12 m12 l3">
             <form action="#">
-                <h6>Индивидуальные проекты</h6>
+                <p>Индивидуальные проекты</p>
                 <p>
                     <input name="group3" type="checkbox" id="f_17" data-price='555' />
                     <label for="f_17">Продвинутая разработка</label>
@@ -197,9 +198,9 @@
             </form>
         </div>
 
-        <div class="col s12 m6 l3">
+        <div class="col s12 m12 l3">
             <form action="#">
-                <h6>Услуги дизайна</h6>
+                <p>Услуги дизайна</p>
                 <p>
                     <input name="group4" type="checkbox" id="f_20" data-price='555' />
                     <label for="f_20">Разработка логотипа</label>
@@ -218,9 +219,9 @@
                 </p>
             </form>
         </div>
-        <div class="col s12 m6 l3">
+        <div class="col s12 m12 l3">
             <form action="#">
-            <h6>Услуги</h6>
+            <p>Услуги</p>
             <div id="landing_field" class="dynamic_checkboxes" style='display:none;'>
                 <p>
                     <input name="group1" type="checkbox" id="f_1" data-price='200' />
@@ -324,7 +325,7 @@
     </div>
     <div class="row container" style="height: 50px;">
         <div class="col s12">
-            <span class='right'><button class="btn-flat right" data-target="modal_email">Заказать</button></span>
+            <span class='right'><button class="btn right blue" data-target="modal_email">Заказать</button></span>
         </div>
     </div>
 
@@ -360,9 +361,9 @@
                 <div class="col l3 s12">
                     <h5 class="grey-text text-darken-4">Ссылки</h5>
                     <ul>
-                        <li><a class="grey-text text-darken-4" href="#!">Главная</a></li>
-                        <li><a class="grey-text text-darken-4" href="#!">Услуги</a></li>
-                        <li><a class="grey-text text-darken-4" href="#!">Договор</a></li>
+                        <li><a class="grey-text text-darken-4" href="index.html">Главная</a></li>
+                        <li><a class="grey-text text-darken-4" href="services.html">Услуги</a></li>
+
                     </ul>
                 </div>
                 <div class="col l3 s12">
@@ -370,7 +371,7 @@
                     <ul class="fa-ul">
                         <li class="grey-text text-darken-4"><i class="fa-li fa fa-phone fa-1x"></i>097 005 70 50</li>
                         <li class="grey-text text-darken-4"><i class="fa-li fa fa-phone fa-1x"></i>073 005 70 50</li>
-                        <li class="grey-text text-darken-4"><i class="fa-li fa fa-envelope-o fa-1x"></i><a class="grey-text text-darken-4" href="mailto:sale@wedede.net?subject=Тема письма">sale@wedede.net</a></li>
+                        <li class="grey-text text-darken-4"><i class="fa-li fa fa-envelope-o fa-1x"></i><a class="grey-text text-darken-4" href="mailto:sale@wedede.net?subject=Заказ услуг">sale@wedede.net</a></li>
                         <li class="grey-text text-darken-4"><i class="fa-li fa fa-map-marker fa-1x"></i>Ukraine</li>
 
                     </ul>
