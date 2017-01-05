@@ -9,7 +9,7 @@
         event.preventDefault();
         var i  = $(this).attr('href');
         t = $(i).offset().top;
-        $('body,html').animate({scrollTop: t}, 2000, 'easeOutExpo');
+        $('body,html').animate({scrollTop: t}, 700, 'easeInOutSine');
     });
       
       
@@ -21,6 +21,7 @@
             $('#'+$(this).attr('target')+'_field').hide();
             $(this).removeClass('active');
             $('#main_feature').remove();
+            $('#dynamic_header').hide().removeClass('animated zoomIn');
         $('#'+$(this).attr('target')+'_field').children().children('input[type="checkbox"]').each(function(){
                $(this).prop( "checked", false );
                 var id=$(this).next('label').attr('for');
@@ -43,9 +44,14 @@
           $('.card-panel').removeClass('active');
 
           $(this).addClass('active');
-          //$(this).children("span").addClass('blue-text');
+
+            //анимация заголовка
+         $('#dynamic_header').show().addClass('animated zoomIn');
+
           
           $('.dynamic_checkboxes').hide();
+
+            //анимация блока
           $('#'+$(this).attr('target')+'_field').show().addClass('animated zoomIn');
           
           $('#main_feature').remove();

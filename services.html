@@ -13,7 +13,6 @@
 
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
     <link rel="stylesheet" href="font-asesome/css/font-awesome.css">
@@ -93,7 +92,7 @@
 
 
     <div class="row container">
-        <h5 class="header">1. Выберете проект</h5>
+        <h5 class="header">1. Выберите проект</h5>
     </div>
 
 
@@ -101,25 +100,25 @@
 
     <div class="row container">
         <div class="col s12 m6 l3">
-            <div class="card-panel z-depth-1 hoverable white"  target='landing' data-price='1500'>
+            <div class="card-panel z-depth-1 hoverable white"  target='landing' data-price='3000'>
                 <span class="grey-text text-darken-4">Посадочная страница
           </span>
             </div>
         </div>
         <div class="col s12 m6 l3">
-            <div class="card-panel z-depth-1 hoverable white"  target='site' data-price='1000'>
+            <div class="card-panel z-depth-1 hoverable white"  target='site' data-price='5000'>
                 <span class="grey-text text-darken-4" target='site'>Сайт визитка
           </span>
             </div>
         </div>
         <div class="col s12 m6 l3">
-            <div class="card-panel z-depth-1 hoverable white"  target='e_commerce' data-price='3000'>
+            <div class="card-panel z-depth-1 hoverable white"  target='e_commerce' data-price='8000'>
                 <span class="grey-text text-darken-4" >Интернет магазин
           </span>
             </div>
         </div>
         <div class="col s12 m6 l3">
-            <div class="card-panel z-depth-1 hoverable white"  target='other' data-price='0'>
+            <div class="card-panel z-depth-1 hoverable white"  target='other' data-price='1000'>
                 <span class="grey-text text-darken-4">Прочее
           </span>
             </div>
@@ -190,7 +189,7 @@
             <form action="#">
                 <p>Услуги дизайна</p>
                 <p>
-                    <input name="group4" type="checkbox" id="f_20" data-price='555' />
+                    <input name="group4" type="checkbox" id="f_20" data-price='1000' />
                     <label for="f_20">Разработка логотипа</label>
                 </p>
                 <p>
@@ -202,19 +201,24 @@
                     <label for="f_22">Айдентика</label>
                 </p>
                 <p>
-                    <input name="group4" type="checkbox" id="f_23" data-price='999' />
+                    <input name="group4" type="checkbox" id="f_23" data-price='500' />
                     <label for="f_23">Оформление групп в социальных сетях</label>
                 </p>
             </form>
         </div>
         <div class="col s12 m12 l3">
             <form action="#">
-            <p>Услуги</p>
+            <p style="display:none;" id='dynamic_header'>Услуги</p>
             <div id="landing_field" class="dynamic_checkboxes" style='display:none;'>
-                <p>
-                    <input name="group1" type="checkbox" id="f_1" data-price='200' />
-                    <label for="f_1">LP Форма обратной связи</label>
+                 <p>
+                    <input name="group1" type="checkbox" id="f_1" data-price='350' />
+                    <label for="f_1">Хостинг 1 год</label>
                 </p>
+                <p>
+                    <input name="group1" type="checkbox" id="f_2" data-price='500' />
+                    <label for="f_2">Форма обратной связи</label>
+                </p>
+<!--
                 <p>
                     <input name="group1" type="checkbox" id="f_2" data-price='100' />
                     <label for="f_2">IS Наполнение</label>
@@ -223,11 +227,12 @@
                     <input name="group1" type="checkbox" id="f_3" data-price='1000' />
                     <label for="f_3">ETS Добавление мобильной версии</label>
                 </p>
+-->
             </div>
             <div id="site_field" class="dynamic_checkboxes" style='display:none'>
                 <p>
-                    <input name="group1" type="checkbox" id="f_4" data-price='555' />
-                    <label for="f4">Feature 4</label>
+                    <input name="group1" type="checkbox" id="f_4" data-price='500' />
+                    <label for="f_4">Хостинг 1 год</label>
                 </p>
                 <p>
                     <input name="group1" type="checkbox" id="f_5" data-price='555' />
@@ -240,12 +245,12 @@
             </div>
             <div id="e_commerce_field" class="dynamic_checkboxes" style='display:none'>
                 <p>
-                    <input name="group1" type="checkbox" id="f_7" data-price='555' />
-                    <label for="f_7">Feature 7</label>
+                    <input name="group1" type="checkbox" id="f_7" data-price='1000' />
+                    <label for="f_7">Хостинг 1 год</label>
                 </p>
                 <p>
-                    <input name="group1" type="checkbox" id="f_8" data-price='555' />
-                    <label for="f_8">Feature 8</label>
+                    <input name="group1" type="checkbox" id="f_8" data-price='20' />
+                    <label for="f_8">Наполнение 1 позиция</label>
                 </p>
                 <p>
                     <input name="group1" type="checkbox" id="f_9" data-price='555' />
@@ -337,7 +342,7 @@
 
                     <div class="row">
                         <div class="col s6 m4 l4"><img class="responsive-img" src="images/photo/MZ.jpg"> Михаил Жилевич - </div>
-                        <div class="col s6 m4 l4"><img class="responsive-img" src="images/photo/SK.jpg">Сергей Кочкин - </div>
+                        <div class="col s6 m4 l4"><img class="responsive-img" src="images/photo/SK.jpg">Сергей Кочкин - припадочный дизайнер</div>
 
                     </div>
 
