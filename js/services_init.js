@@ -46,13 +46,13 @@
           $(this).addClass('active');
 
             //анимация заголовка
-         $('#dynamic_header').show().addClass('animated zoomIn');
+         $('#dynamic_header').show().addClass('animated fadeIn');
 
           
           $('.dynamic_checkboxes').hide();
 
             //анимация блока
-          $('#'+$(this).attr('target')+'_field').show().addClass('animated zoomIn');
+          $('#'+$(this).attr('target')+'_field').show().addClass('animated fadeIn');
           
           $('#main_feature').remove();
           $('#summary').prepend("<div class='col s12' id='main_feature'><h6>"+$(this).children('span').html()+"<span class='right'><span class='amount'>"+$(this).data('price')+"</span> грн.</span></h6></div>");
@@ -87,7 +87,7 @@
             var item_id=$(this).attr('id');
             item_id = item_id.split("_");
             item_id=item_id[1];
-            var close_button="<i class='fa fa-times red-text' aria-hidden='true' style='padding-left:1rem;cursor:pointer;' id='remove_"+item_id+"'></i>";
+            var close_button="<i class='fa fa-times black-text' aria-hidden='true' style='padding-left:1rem;cursor:pointer;' id='remove_"+item_id+"'></i>";
           
           if($(this).prop('checked'))
           {
