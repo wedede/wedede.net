@@ -14,6 +14,7 @@
       
       
       
+      
       $('.card-panel').click(function ()
       {
         if($(this).hasClass('active'))
@@ -175,6 +176,28 @@ function calculate()
 			Materialize.toast('Ошибка отправки', 4000);
 		})
       });
+      
+      function GetURLParameter(sParam)
+      {
+        var sPageURL = window.location.search.substring(1);
+        var sURLVariables = sPageURL.split('&');
+        for (var i = 0; i < sURLVariables.length; i++)
+        {
+            var sParameterName = sURLVariables[i].split('=');
+            if (sParameterName[0] == sParam)
+            {
+                return sParameterName[1];
+            }
+        }
+      }
+
+      
+      var main_val = GetURLParameter('p');
+      var option_val = GetURLParameter('i');
+      
+      
+      $('#'+main_val+'_button').click();
+      $('#'+option_val).click();
  
   }); // end of document ready
 })(jQuery); // end of jQuery name space
