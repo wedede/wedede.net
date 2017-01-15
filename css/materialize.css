@@ -5787,7 +5787,6 @@ input[type=number]:focus:not([readonly]),
 input[type=search]:focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]) {
   border-bottom: 1px solid #212121;
-
 }
 
 input:not([type]):focus:not([readonly]) + label,
