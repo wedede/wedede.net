@@ -56,7 +56,7 @@
           $('#'+$(this).attr('target')+'_field').show().addClass('animated fadeIn');
           
           $('#main_feature').remove();
-          $('#summary').prepend("<div class='col s12' id='main_feature'><h6>"+$(this).children('span').html()+"<span class='right'><span class='amount'>"+$(this).data('price')+"</span> грн.</span></h6></div>");
+          $('#summary').prepend("<div class='col s12' id='main_feature'><h6 class='feature'>"+$(this).children('span').html()+"<span class='right'><span class='amount'>"+$(this).data('price')+"</span> грн.</span></h6></div>");
 
 
 
@@ -92,7 +92,7 @@
           
           if($(this).prop('checked'))
           {
-               $('#optional_features').prepend("<h6 id='feature_"+item_id+"'>"+$(this).next('label').text()+"<span class='right'><span class='amount'>"+$(this).data('price')+"</span> грн."+close_button+"</span></h6>");
+               $('#optional_features').prepend("<h6 id='feature_"+item_id+"' class='feature'>"+$(this).next('label').text()+"<span class='right'><span class='amount'>"+$(this).data('price')+"</span> грн."+close_button+"</span></h6>");
                $('#feature_'+item_id).addClass('animated flipInX').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () 
                {
                     $('#feature_'+item_id).removeClass('animated flipInX');
@@ -147,33 +147,58 @@ function calculate()
       
       $('#send_order').click(function()
       {
-         var options=[];
+         var data={}
+         
+         var amounts=[];
+          
          $('.amount').each(function()
           {
-             options.push(parseInt($(this).html()));
+             amounts.push(parseInt($(this).html()));
          });
+         
+         var features=[];
           
-          console.log(options);
+         $('.feature').each(function()
+          {
+             features.push($(this).clone().children().remove().end().text());
+         });
+        
+          
+         data['features']=features; 
+         data['amounts']=amounts;
+          
+         data['summ']=$('#amount').text();
+         data['currency']=$('#currency').text();
+         data['contact']=$('#email').val();
+          
+          
+          console.log(data);
           Materialize.toast('Отправка заказа...',60000);
-          
-          $.post( "mail.php", { data:$('#order_data').html()})
+
+          $.post( "/mail.php", { jsonData: JSON.stringify(data)})
 		.done(function( returned_data ) 
 		{	
 			$('.toast').remove(); 
               
+             console.log(returned_data);
+              
 			if(returned_data.result=='sended') 
 			{	
-                Materialize.toast('Спасибо за заказ', 4000);
+                Materialize.toast('Спасибо за заказ, мы свяжемся с вами в ближайшее время', 6000);
 			}
             if(returned_data.result=='limit') 
 			{	
                 Materialize.toast('Закза был отослан ранее', 4000);
 			}
-			console.log(returned_data);
+              if(returned_data.result=='empty') 
+			{
+             	Materialize.toast('Что то определенно пошло не так... и мы уже ковыряемся', 4000);   
+            }
 		})
 		.fail(function() 
 		{
 			Materialize.toast('Ошибка отправки', 4000);
+            console.log(returned_data);
 		})
       });
       
