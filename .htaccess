@@ -6,3 +6,6 @@ RewriteRule . %1 [R=301,L,E=NS:1,QSA]
 
 RewriteRule ^ru$ index-ru.html
 RewriteRule ^eng$ index-eng.html
+
+RewriteRule ^ru/services$ services-ru.html
+RewriteRule ^eng/services$ services-eng.html
