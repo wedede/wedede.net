@@ -25,5 +25,12 @@
           $(this).addClass('active');
         
       });
+      
+      
+    $('#send_callback').click(function()
+      {
+          console.log('ok');
+       
+      });
   }); // end of document ready
 })(jQuery); // end of jQuery name space
