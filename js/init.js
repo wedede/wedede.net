@@ -1,8 +1,8 @@
 (function($){
   $(function(){
-
     $('.button-collapse').sideNav();
     $('.parallax').parallax();
+    $('#callback').modal();    
 
        $('.collapse').on('click',function(e){
   e.preventDefault();
