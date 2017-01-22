@@ -18,8 +18,6 @@
     <link rel="stylesheet" href="/font-asesome/css/font-awesome.css">
     <link rel="stylesheet" href="/css/animate.css">
 
-
-
     <!--  Scripts-->
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="/js/materialize.js"></script>
@@ -35,22 +33,22 @@
 
 <body class="grey lighten-5 grey-text text-darken-4">
 
-<!--Модальное окно email-->
-<div id="modal_email" class="modal">
+    <!--Модальное окно email-->
+    <div id="modal_email" class="modal">
         <div class="modal-content">
-		<h4>Email</h4>
-		<p>Укажите ваш контактный e-mail для связи</p>
-		<div class="row">
-        <div class="input-field col s12">
-          <input id="email" type="email" class="validate">
-            <label for="email" data-error="Указан неправильный адрес" data-success="">Email</label>
+            <h4>Email</h4>
+            <p>Укажите ваш контактный e-mail для связи</p>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="email" type="email" class="validate">
+                    <label for="email" data-error="Указан неправильный адрес" data-success="">Email</label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-close btn-flat" id="send_order">отправить</button>
+                <a href="#" class="modal-action modal-close btn-flat">отменить</a>
+            </div>
         </div>
-	</div>
-	<div class="modal-footer">
-            <button class="modal-close btn-flat" id="send_order">отправить</button>
-			<a href="#" class="modal-action modal-close btn-flat">отменить</a>
-	</div>
-    </div>
     </div>
 
 
@@ -58,8 +56,8 @@
 
     <nav class="white z-depth-0" role="navigation">
         <div class="nav-wrapper container">
-            <a id="logo-container" href="/ru" class="brand-logo grey-text text-darken-4 hide-on-small-only"><img src="/images/WEDEDE-LOGO.svg"></a>
-            <a id="logo-container" href="/ru" class="brand-logo grey-text text-darken-4 hide-on-med-and-up"><img src="/images/LOGO.svg"></a>
+            <a id="logo-container" href="/ru" class="brand-logo grey-text text-darken-4"><img src="/images/WEDEDE-LOGO.svg"></a>
+
 
             <ul class="right hide-on-med-and-down">
                 <li><a href="/ru" class="grey-text text-darken-4">Главная</a></li>
@@ -68,15 +66,9 @@
             </ul>
 
             <ul id="nav-mobile" class="side-nav">
-<<<<<<< HEAD:services.html
                 <li><a href="index-ru.html" class="center grey-text text-darken-4">Главная</a></li>
-                <li><a href="index-ru.html#gallery" class="center grey-text text-darken-4">Портфолио</a></li>
-                <li><a href="#contacts" class="center grey-text text-darken-4">Контакты</a></li>
-=======
-                <li><a href="/ru" class="center grey-text text-darken-4">Главная</a></li>
-                <li><a href="/ru#gallery" class="center grey-text text-darken-4">Портфолио</a></li>
-                <li><a href="#contacts" class="center grey-text text-darken-4 jump">Контакты</a></li>
->>>>>>> origin/master:services-ru.html
+                    <li><a href="index-ru.html#gallery" class="center grey-text text-darken-4">Портфолио</a></li>
+                    <li><a href="#contacts" class="center grey-text text-darken-4">Контакты</a></li>
             </ul>
             <a href="#" data-activates="nav-mobile" class="button-collapse grey-text text-darken-4"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></a>
         </div>
@@ -106,25 +98,25 @@
 
     <div class="row container">
         <div class="col s12 m6 l3">
-            <div class="card-panel z-depth-1 hoverable white"  target='landing' id='landing_button' data-price='3000'>
+            <div class="card-panel z-depth-1 hoverable white" target='landing' id='landing_button' data-price='3000'>
                 <span class="grey-text text-darken-4">Посадочная страница
           </span>
             </div>
         </div>
         <div class="col s12 m6 l3">
-            <div class="card-panel z-depth-1 hoverable white"  target='site' id='site_button' data-price='5000'>
+            <div class="card-panel z-depth-1 hoverable white" target='site' id='site_button' data-price='5000'>
                 <span class="grey-text text-darken-4" target='site'>Сайт визитка
           </span>
             </div>
         </div>
         <div class="col s12 m6 l3">
-            <div class="card-panel z-depth-1 hoverable white"  target='e_commerce' id='e_commerce_button' data-price='8000'>
-                <span class="grey-text text-darken-4" >Интернет магазин
+            <div class="card-panel z-depth-1 hoverable white" target='e_commerce' id='e_commerce_button' data-price='8000'>
+                <span class="grey-text text-darken-4">Интернет магазин
           </span>
             </div>
         </div>
         <div class="col s12 m6 l3">
-            <div class="card-panel z-depth-1 hoverable white"  target='other' id='other_button' data-price='0'>
+            <div class="card-panel z-depth-1 hoverable white" target='other' id='other_button' data-price='0'>
                 <span class="grey-text text-darken-4">Прочее
           </span>
             </div>
@@ -154,20 +146,20 @@
             <form action="#">
                 <p>SEO SMM и поддержка</p>
                 <p>
-                    <input name="group1" type="checkbox" id="f_11" data-price='555' />
-                    <label for="f_11">SEO</label>
+                    <input name="group1" type="checkbox" id="f_11" data-price='2000' />
+                    <label class="tooltipped" data-position="right" data-delay="50" data-tooltip="от 2000 грн за комплекс мер для поднятия позиций сайта в результатах выдачи поисковых систем" for="f_11">SEO</label>
                 </p>
                 <p>
-                    <input name="group1" type="checkbox" id="f_12" data-price='555' />
-                    <label for="f_12">SMM</label>
+                    <input name="group1" type="checkbox" id="f_12" data-price='50' />
+                    <label class="tooltipped" data-position="right" data-delay="50" data-tooltip="от 50 грн за один пост для привлечения трафика или внимания к сайту" for="f_12">SMM</label>
                 </p>
                 <p>
-                    <input name="group1" type="checkbox" id="f_13" data-price='555' />
-                    <label for="f_13">Поддержка сайта</label>
+                    <input name="group1" type="checkbox" id="f_13" data-price='600' />
+                    <label class="tooltipped" data-position="right" data-delay="50" data-tooltip="от 600 грн за услуги ...???" for="f_13">Поддержка сайта</label>
                 </p>
                 <p>
-                    <input name="group1" type="checkbox" id="f_14" data-price='555' />
-                    <label for="f_14">Таргетинг</label>
+                    <input name="group1" type="checkbox" id="f_14" data-price='500' />
+                    <label class="tooltipped" data-position="right" data-delay="50" data-tooltip="от 500 грн за составление и 10% от дальнейшего бюджета на рекламу" for="f_14">Таргетинг</label>
                 </p>
             </form>
         </div>
@@ -176,16 +168,16 @@
             <form action="#">
                 <p>Индивидуальные проекты</p>
                 <p>
-                    <input name="group2" type="checkbox" id="f_21" data-price='1' />
-                    <label for="f_21">Продвинутая разработка</label>
+                    <input name="group2" type="checkbox" id="f_21" data-price='1000' />
+                    <label class="tooltipped" data-position="right" data-delay="50" data-tooltip="от 1000 грн ...???" for="f_21">Продвинутая разработка</label>
                 </p>
                 <p>
-                    <input name="group2" type="checkbox" id="f_22" data-price='2' />
-                    <label for="f_22">Интеграция</label>
+                    <input name="group2" type="checkbox" id="f_22" data-price='1000' />
+                    <label class="tooltipped" data-position="right" data-delay="50" data-tooltip="от 1000 грн ...???" for="f_22">Интеграция</label>
                 </p>
                 <p>
-                    <input name="group2" type="checkbox" id="f_23" data-price='3' />
-                    <label for="f_23">Дополнительный функционал</label>
+                    <input name="group2" type="checkbox" id="f_23" data-price='100' />
+                    <label class="tooltipped" data-position="right" data-delay="50" data-tooltip="от 100 грн ...???" for="f_23">Дополнительный функционал</label>
                 </p>
 
             </form>
@@ -195,84 +187,83 @@
             <form action="#">
                 <p>Услуги дизайна</p>
                 <p>
-                    <input name="group3" type="checkbox" id="f_30" data-price='1000' />
-                    <label for="f_30">Разработка логотипа</label>
+                    <input name="group3" type="checkbox" id="f_30" data-price='1500' />
+                    <label class="tooltipped" data-position="right" data-delay="50" data-tooltip="от 1500 грн за 3 варианта" for="f_30">Разработка логотипа</label>
                 </p>
                 <p>
-                    <input name="group3" type="checkbox" id="f_31" data-price='1000' />
-                    <label for="f_31">Нейминг</label>
+                    <input name="group3" type="checkbox" id="f_31" data-price='2000' />
+                    <label class="tooltipped" data-position="right" data-delay="50" data-tooltip="от 2000 грн. Разработка названия торговой марки" for="f_31">Нейминг</label>
                 </p>
                 <p>
-                    <input name="group3" type="checkbox" id="f_32" data-price='1000' />
-                    <label for="f_32">Айдентика</label>
+                    <input name="group3" type="checkbox" id="f_32" data-price='3000' />
+                    <label class="tooltipped" data-position="right" data-delay="50" data-tooltip="от 3000 грн. Разработка фирменного стиля" for="f_32">Айдентика</label>
                 </p>
                 <p>
                     <input name="group3" type="checkbox" id="f_33" data-price='500' />
-                    <label for="f_33">Оформление групп в социальных сетях</label>
+                    <label class="tooltipped" data-position="right" data-delay="50" data-tooltip="500 грн за оформление в одной социальной сети вашей страницы" for="f_33">Оформление групп в социальных сетях</label>
                 </p>
             </form>
         </div>
 
         <div class="col s12 m12 l3">
             <form action="#">
-            <p style="display:none;" id='dynamic_header'>Услуги</p>
-            <div id="landing_field" class="dynamic_checkboxes" style='display:none;'>
-                 <p>
-                    <input name="group4" type="checkbox" id="f_41" data-price='350' />
-                    <label for="f_41">Хостинг 1 год</label>
-                </p>
-                <p>
-                    <input name="group4" type="checkbox" id="f_42" data-price='300' />
-                    <label for="f_42">Форма обратной связи</label>
-                </p>
-                <p>
-                    <input name="group4" type="checkbox" id="f_43" data-price='555' />
-                    <label for="f_43">Регистрация доменного имени</label>
-                </p>
-            </div>
-            <div id="site_field" class="dynamic_checkboxes" style='display:none'>
-                <p>
-                    <input name="group4" type="checkbox" id="f_44" data-price='500' />
-                    <label for="f_44">Хостинг 1 год</label>
-                </p>
-                <p>
-                    <input name="group4" type="checkbox" id="f_45" data-price='500' />
-                    <label for="f_45">Форма обратной связи</label>
-                </p>
-            </div>
-            <div id="e_commerce_field" class="dynamic_checkboxes" style='display:none'>
-                <p>
-                    <input name="group4" type="checkbox" id="f_46" data-price='1000' />
-                    <label for="f_46">Хостинг 1 год</label>
-                </p>
-                <p>
-                    <input name="group4" type="checkbox" id="f_47" data-price='20' />
-                    <label for="f_47">Наполнение 1 позиция</label>
-                </p>
-                <p>
-                    <input name="group4" type="checkbox" id="f_48" data-price='500' />
-                    <label for="f_48">Форма обратной связи</label>
-                </p>
-            </div>
-            <div id="other_field" class="dynamic_checkboxes" style='display:none'>
-                <p>
-                    <input name="group4" type="checkbox" id="f_49" data-price='5000' />
-                    <label for="f_49">Редизайн сайта</label>
-                </p>
-                <p>
-                    <input name="group4" type="checkbox" id="f_50" data-price='2000' />
-                    <label for="f_50">Добавление мобильной версии</label>
-                </p>
-                <p>
-                    <input name="group4" type="checkbox" id="f_51" data-price='100' />
-                    <label for="f_51">Что-то на ваше усмотрение</label>
-                </p>
-                <p>
-                    <input name="group4" type="checkbox" id="f_52" data-price='300' />
-                    <label for="f_52">Google Analytics и Яндекс.Метрика</label>
-                </p>
+                <p style="display:none;" id='dynamic_header'>Услуги</p>
+                <div id="landing_field" class="dynamic_checkboxes" style='display:none;'>
+                    <p>
+                        <input name="group4" type="checkbox" id="f_41" data-price='350' />
+                        <label class="tooltipped" data-position="right" data-delay="50" data-tooltip="350 грн. Услуга по предоставлению ваших ресурсов для размешения информации на сервере" for="f_41">Хостинг 1 год</label>
+                    </p>
+                    <p>
+                        <input name="group4" type="checkbox" id="f_42" data-price='300' />
+                        <label class="tooltipped" data-position="right" data-delay="50" data-tooltip="300 грн. Удобная функция для связи клиента с вами" for="f_42">Форма обратной связи</label>
+                    </p>
+                </div>
 
-            </div>
+                <div id="site_field" class="dynamic_checkboxes" style='display:none'>
+                    <p>
+                        <input name="group4" type="checkbox" id="f_44" data-price='500' />
+                        <label class="tooltipped" data-position="right" data-delay="50" data-tooltip="500 грн. Услуга по предоставлению ваших ресурсов для размешения информации на сервере" for="f_44">Хостинг 1 год</label>
+                    </p>
+                    <p>
+                        <input name="group4" type="checkbox" id="f_45" data-price='500' />
+                        <label class="tooltipped" data-position="right" data-delay="50" data-tooltip="500 грн. Удобная функция для связи клиента с вами" for="f_45">Форма обратной связи</label>
+                    </p>
+                </div>
+
+                <div id="e_commerce_field" class="dynamic_checkboxes" style='display:none'>
+                    <p>
+                        <input name="group4" type="checkbox" id="f_46" data-price='1000' />
+                        <label class="tooltipped" data-position="right" data-delay="50" data-tooltip="1000 грн. Услуга по предоставлению ваших ресурсов для размешения информации на сервере" for="f_46">Хостинг 1 год</label>
+                    </p>
+                    <p>
+                        <input name="group4" type="checkbox" id="f_47" data-price='20' />
+                        <label class="tooltipped" data-position="right" data-delay="50" data-tooltip="20 грн за наполнение информацией одной позиции" for="f_47">Наполнение 1 позиция</label>
+                    </p>
+                    <p>
+                        <input name="group4" type="checkbox" id="f_48" data-price='500' />
+                        <label class="tooltipped" data-position="right" data-delay="50" data-tooltip="500 грн. Удобная функция для связи клиента с вами" for="f_48">Форма обратной связи</label>
+                    </p>
+                </div>
+
+                <div id="other_field" class="dynamic_checkboxes" style='display:none'>
+                    <p>
+                        <input name="group4" type="checkbox" id="f_49" data-price='5000' />
+                        <label class="tooltipped" data-position="right" data-delay="50" data-tooltip="от 5000 грн за полную переработку сайта" for="f_49">Редизайн сайта</label>
+                    </p>
+                    <p>
+                        <input name="group4" type="checkbox" id="f_50" data-price='2000' />
+                        <label class="tooltipped" data-position="right" data-delay="50" data-tooltip="от 2000 грн за добавление мобильной версии сайта к уже имеющемуся" for="f_50">Добавление мобильной версии</label>
+                    </p>
+                    <p>
+                        <input name="group4" type="checkbox" id="f_51" data-price='1000' />
+                        <label class="tooltipped" data-position="right" data-delay="50" data-tooltip="от 1000 грн ...???" for="f_51">Что-то на ваше усмотрение</label>
+                    </p>
+                    <p>
+                        <input name="group4" type="checkbox" id="f_52" data-price='100' />
+                        <label class="tooltipped" data-position="right" data-delay="50" data-tooltip="100 грн за настройку анилиза и метрики для одной страницы" for="f_52">Google Analytics и Яндекс.Метрика</label>
+                    </p>
+
+                </div>
             </form>
         </div>
 
@@ -286,7 +277,7 @@
 
 
 
-     <div class="row" style="height: 50px;">
+    <div class="row" style="height: 50px;">
         <div class="col s12"></div>
     </div>
 
@@ -300,32 +291,33 @@
 
 
     <div id='order_data'>
-    <div class="row container" style="height: 50px;" id='summary'>
-        <div class="col s12" id='main_feature'>
+        <div class="row container" style="height: 50px;" id='summary'>
+            <div class="col s12" id='main_feature'>
+            </div>
+            <div class="col s12" id='optional_features'>
+            </div>
         </div>
-        <div class="col s12" id='optional_features'>
+        <div class="row container" style="height: 50px;">
+            <div class="col s12">
+                <h4><span class='left'>Итого:</span><span class='right' id='currency'>&nbsp;грн.</span><span class='right' id='amount'>0</span></h4>
+            </div>
         </div>
     </div>
     <div class="row container" style="height: 50px;">
         <div class="col s12">
-            <h4><span class='left'>Итого:</span><span class='right' id='currency'>&nbsp;грн.</span><span class='right' id='amount'>0</span></h4>
-        </div>
-    </div>
-    </div>
-    <div class="row container" style="height: 50px;">
-        <div class="col s12"><br>
+            <br>
             <span class='right'><button class="btn right blue" data-target="modal_email">Заказать</button></span>
         </div>
     </div>
 
 
- <div class="row" style="height: 50px;">
+    <div class="row" style="height: 50px;">
         <div class="col s12"></div>
     </div>
-<div class="container">
+    <div class="container">
         <div class="divider"></div>
     </div>
- <div class="row" style="height: 50px;">
+    <div class="row" style="height: 50px;">
         <div class="col s12"></div>
     </div>
 
@@ -412,13 +404,11 @@
         <div class="footer-copyright">
             <div class="container grey-text text-darken-4">
                 Made by <a class="grey-text text-darken-4" href="http://wedede.net">WEDEDE</a>
-                <a class="grey-text text-darken-4 right">&copy; 2016</a>
+                <a class="grey-text text-darken-4 right">&copy; 2017</a>
             </div>
         </div>
 
     </footer>
-
-
 
 
 
