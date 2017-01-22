@@ -38,11 +38,27 @@
     <!-- Modal окно для обратного звонка -->
   <div id="callback" class="modal">
     <div class="modal-content">
-      <h4>Modal Header</h4>
-      <p>A bunch of text</p>
+      <h4></h4>
+      <p>Укажате ваш email или номер телефона</p>
+          <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+
+          <input id="email" type="email" class="validate">
+          <label for="email" data-error="Указан неправильный адрес" data-success="">Email</label>
+        </div>
+
+        <div class="input-field col s6">
+
+          <input id="icon_telephone" name="phone" type="tel" pattern="[0-9]{12}" class="validate" value='380'><label for="icon_telephone">номер телефона</label>
+        </div>
+      </div>
+    </form>
+  </div>
     </div>
     <div class="modal-footer">
-      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+      <a href="#!" class=" modal-action modal-close btn-flat">Отправить</a>
     </div>
   </div>
 
@@ -313,7 +329,7 @@
             <h4 class="col s12 light center">Возникли вопросы?</h4>
 
             <div class="col s12 l6 center offset-l3">
-                <p class="light">Закажите обратный звонок и мы проконсультируем вас в ближайшие время</p>
+                <p class="light">Закажите обратный звонок или укажите e-mail и мы проконсультируем вас в ближайшие время</p>
             </div>
         </div>
 
