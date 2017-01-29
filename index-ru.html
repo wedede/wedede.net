@@ -28,76 +28,80 @@
         new WOW().init();
     </script>
     <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-91060292-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-91060292-1', 'auto');
+        ga('send', 'pageview');
+    </script>
 
 </head>
 
-
 <body class="grey lighten-5 grey-text text-darken-4">
 
-
-
     <!-- Modal окно для обратного звонка -->
-  <div id="callback" class="modal">
-    <div class="modal-content">
-      <h4></h4>
-      <p>Укажите ваш email или номер телефона</p>
-          <div class="row">
-    <form class="col s12">
-      <div class="row">
-        <div class="input-field col s6">
+    <div id="callback" class="modal">
+        <div class="modal-content">
+            <h4></h4>
+            <p>Укажите ваш email или номер телефона</p>
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s6">
 
-          <input id="callback_email" type="email" class="validate" required="">
-          <label for="callback_email" data-error="Указан неправильный адрес" data-success="" >Email</label>
+                            <input id="callback_email" type="email" class="validate" required="">
+                            <label for="callback_email" data-error="Указан неправильный адрес" data-success="">Email</label>
+                        </div>
+
+                        <div class="input-field col s6">
+
+                            <input id="callback_phone" name="phone" type="tel" pattern="[0-9+]{6,13}" class="validate" required="" placeholder="+">
+                            <label data-error="Номер телtфона должен начинаться с + и состоять о из цифр" for="callback_phone">номер телефона</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
-
-        <div class="input-field col s6">
-
-          <input id="callback_phone" name="phone" type="tel" pattern="[0-9+]{6,13}" class="validate" required="" placeholder="+"><label data-error="Номер телtфона должен начинаться с + и состоять о из цифр" for="callback_phone">номер телефона</label>
+        <div class="modal-footer">
+            <button type="submit" class="modal-action  btn-flat" id="send_callback">Отправить</button>
         </div>
-      </div>
-    </form>
-  </div>
     </div>
-    <div class="modal-footer">
-      <button type="submit" class="modal-action  btn-flat" id="send_callback">Отправить</button>
-    </div>
-  </div>
-
-
 
     <nav class="white z-depth-0" role="navigation">
         <div class="nav-wrapper container">
-            <a id="logo-container" href="/ru" class="brand-logo grey-text text-darken-4"><img src="/images/WEDEDE-LOGO.svg"></a>
-
+            <a id="logo-container" href="/ru" class="brand-logo grey-text text-darken-4"><img src="/images/WEDEDE-LOGO.svg">
+            </a>
 
             <ul class="right hide-on-med-and-down">
-                <li><a href="ru/services" class="grey-text text-darken-4">Услуги</a></li>
-                <li><a href="#gallery" class="grey-text text-darken-4 jump">Портфолио</a></li>
-                <li><a href="#contacts" class="grey-text text-darken-4 jump">Контакты</a></li>
+                <li><a href="ru/services" class="grey-text text-darken-4">Услуги</a>
+                </li>
+                <li><a href="#gallery" class="grey-text text-darken-4 jump">Портфолио</a>
+                </li>
+                <li><a href="#contacts" class="grey-text text-darken-4 jump">Контакты</a>
+                </li>
             </ul>
 
             <ul id="nav-mobile" class="side-nav">
-                <li><a href="ru/services" class="center grey-text text-darken-4">Услуги</a></li>
-                <li><a href="#gallery" class="center grey-text text-darken-4">Портфолио</a></li>
-                <li><a href="#contacts" class="center grey-text text-darken-4">Контакты</a></li>
+                <li><a href="ru/services" class="center grey-text text-darken-4">Услуги</a>
+                </li>
+                <li><a href="#gallery" class="center grey-text text-darken-4">Портфолио</a>
+                </li>
+                <li><a href="#contacts" class="center grey-text text-darken-4">Контакты</a>
+                </li>
             </ul>
             <a href="#" data-activates="nav-mobile" class="button-collapse grey-text text-darken-4"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></a>
         </div>
     </nav>
 
-
-
     <div class="divider"></div>
-
 
     <div class="section no-pad-bot" id="index-banner">
         <div class="container">
@@ -122,20 +126,9 @@
 
     </div>
 
-
-
     <div class="container">
         <div class="divider"></div>
     </div>
-
-
-
-
-
-
-
-
-
 
     <!-- Divider l 100px -->
     <div class="row" style="height: 100px;">
@@ -148,8 +141,6 @@
         </div>
         <div class="section">
             <!--   Icon Section   -->
-
-
 
             <div class="row">
                 <div class="col s12 m12 l6">
@@ -174,22 +165,21 @@
                             <div class="collapsible-header"><i class="fa fa-angle-down" aria-hidden="true"></i>Посадочная страница</div>
                             <div class="collapsible-body">
                                 <p class="light">Одностраничный проект, прекрасно подходит для небольших объемов информации, продажи одного продукта или услуги. &nbsp;
-                                    <a class="blue-text" href="ru/services?p=landing"><i class="fa fa-external-link fa-1x" aria-hidden="true"></i></a></p>
+                                    <a class="blue-text" href="ru/services?p=landing"><i class="fa fa-external-link fa-1x" aria-hidden="true"></i></a>
+                                </p>
                             </div>
                         </li>
                         <li>
                             <div class="collapsible-header"><i class="fa fa-angle-down" aria-hidden="true"></i>Интернет магазин</div>
                             <div class="collapsible-body">
                                 <p class="light">Предназначен для продажи большого количества товаров или услуг. &nbsp;
-                                    <a class="blue-text" href="ru/services?p=e_commerce"><i class="fa fa-external-link fa-1x" aria-hidden="true"></i></a></p>
+                                    <a class="blue-text" href="ru/services?p=e_commerce"><i class="fa fa-external-link fa-1x" aria-hidden="true"></i></a>
+                                </p>
                             </div>
                         </li>
                     </ul>
                 </div>
             </div>
-
-
-
 
             <div class="row">
                 <div class="col s12 m12 l6">
@@ -205,35 +195,37 @@
                             <div class="collapsible-header"><i class="fa fa-angle-down" aria-hidden="true"></i>SEO</div>
                             <div class="collapsible-body">
                                 <p class="light">Search Engine Optimization - решение по продвижению вашего сайта среди результатов поиска (Google, Yandex). &nbsp;
-                                    <a class="blue-text" href="ru/services?i=f_11"><i class="fa fa-external-link fa-1x" aria-hidden="true"></i></a></p>
+                                    <a class="blue-text" href="ru/services?i=f_11"><i class="fa fa-external-link fa-1x" aria-hidden="true"></i></a>
+                                </p>
                             </div>
                         </li>
                         <li>
                             <div class="collapsible-header"><i class="fa fa-angle-down" aria-hidden="true"></i>SMM</div>
                             <div class="collapsible-body">
                                 <p class="light">Social media marketing - создание наполнение и администрирование вашего представительства в популярных социальных сетях. &nbsp;
-                                    <a class="blue-text" href="ru/services?i=f_12"><i class="fa fa-external-link fa-1x" aria-hidden="true"></i></a></p>
+                                    <a class="blue-text" href="ru/services?i=f_12"><i class="fa fa-external-link fa-1x" aria-hidden="true"></i></a>
+                                </p>
                             </div>
                         </li>
                         <li>
                             <div class="collapsible-header"><i class="fa fa-angle-down" aria-hidden="true"></i>Поддержка сайта</div>
                             <div class="collapsible-body">
                                 <p class="light">Регулярное обновление контента, поддержка работоспособности, хостинг и другие технические нюансы. &nbsp;
-                                    <a class="blue-text" href="ru/services?i=f_13"><i class="fa fa-external-link fa-1x" aria-hidden="true"></i></a></p>
+                                    <a class="blue-text" href="ru/services?i=f_13"><i class="fa fa-external-link fa-1x" aria-hidden="true"></i></a>
+                                </p>
                             </div>
                         </li>
                         <li>
                             <div class="collapsible-header"><i class="fa fa-angle-down" aria-hidden="true"></i>Таргетинг</div>
                             <div class="collapsible-body">
                                 <p class="light">Рекламная кампания в сети среди ваших потенциальных клиентов. &nbsp;
-                                    <a class="blue-text" href="ru/services?i=f_14"><i class="fa fa-external-link fa-1x" aria-hidden="true"></i></a></p>
+                                    <a class="blue-text" href="ru/services?i=f_14"><i class="fa fa-external-link fa-1x" aria-hidden="true"></i></a>
+                                </p>
                             </div>
                         </li>
                     </ul>
                 </div>
             </div>
-
-
 
             <div class="row">
                 <div class="col s12 m12 l6">
@@ -249,29 +241,30 @@
                             <div class="collapsible-header"><i class="fa fa-angle-down" aria-hidden="true"></i>Продвинутая разработка</div>
                             <div class="collapsible-body">
                                 <p class="light">Написание порталов, сервисов, ботов, нестандартных программных решений. &nbsp;
-                                    <a class="blue-text" href="ru/services?i=f_21"><i class="fa fa-external-link fa-1x" aria-hidden="true"></i></a></p>
+                                    <a class="blue-text" href="ru/services?i=f_21"><i class="fa fa-external-link fa-1x" aria-hidden="true"></i></a>
+                                </p>
                             </div>
                         </li>
                         <li>
                             <div class="collapsible-header"><i class="fa fa-angle-down" aria-hidden="true"></i>Интеграция</div>
                             <div class="collapsible-body">
                                 <p class="light">Интеграция, синхронизация проекта с различными API, программными продуктами или платформами. &nbsp;
-                                    <a class="blue-text" href="ru/servicesl?i=f_22"><i class="fa fa-external-link fa-1x" aria-hidden="true"></i></a></p>
+                                    <a class="blue-text" href="ru/servicesl?i=f_22"><i class="fa fa-external-link fa-1x" aria-hidden="true"></i></a>
+                                </p>
                             </div>
                         </li>
                         <li>
                             <div class="collapsible-header"><i class="fa fa-angle-down" aria-hidden="true"></i>Дополнительный функционал</div>
                             <div class="collapsible-body">
                                 <p class="light">Расширение существующего функционала вашего проекта за счет дополнительных модулей. &nbsp;
-                                    <a class="blue-text" href="ru/services?i=f_23"><i class="fa fa-external-link fa-1x" aria-hidden="true"></i></a></p>
+                                    <a class="blue-text" href="ru/services?i=f_23"><i class="fa fa-external-link fa-1x" aria-hidden="true"></i></a>
+                                </p>
                             </div>
                         </li>
-
 
                     </ul>
                 </div>
             </div>
-
 
             <div class="row">
                 <div class="col s12 m12 l6">
@@ -287,38 +280,37 @@
                             <div class="collapsible-header"><i class="fa fa-angle-down" aria-hidden="true"></i>Разработка логотипа</div>
                             <div class="collapsible-body">
                                 <p class="light">Разработка яркого, содержательного, запоминающегося логотипа для вашего сайта или торгового знака. &nbsp;
-                                    <a class="blue-text" href="ru/services?i=f_30"><i class="fa fa-external-link fa-1x" aria-hidden="true"></i></a></p>
+                                    <a class="blue-text" href="ru/services?i=f_30"><i class="fa fa-external-link fa-1x" aria-hidden="true"></i></a>
+                                </p>
                             </div>
                         </li>
                         <li>
                             <div class="collapsible-header"><i class="fa fa-angle-down" aria-hidden="true"></i>Нейминг</div>
                             <div class="collapsible-body">
                                 <p class="light">Создание звучного, лаконичного имени для вашей фирмы, сайта, проекта. &nbsp;
-                                    <a class="blue-text" href="ru/services?i=f_31"><i class="fa fa-external-link fa-1x" aria-hidden="true"></i></a></p>
+                                    <a class="blue-text" href="ru/services?i=f_31"><i class="fa fa-external-link fa-1x" aria-hidden="true"></i></a>
+                                </p>
                             </div>
                         </li>
                         <li>
                             <div class="collapsible-header"><i class="fa fa-angle-down" aria-hidden="true"></i>Айдентика</div>
                             <div class="collapsible-body">
                                 <p class="light">Разработка комплексной визуальной концепции корпоративного стиля. &nbsp;
-                                    <a class="blue-text" href="ru/services?i=f_32"><i class="fa fa-external-link fa-1x" aria-hidden="true"></i></a></p>
+                                    <a class="blue-text" href="ru/services?i=f_32"><i class="fa fa-external-link fa-1x" aria-hidden="true"></i></a>
+                                </p>
                             </div>
                         </li>
                         <li>
                             <div class="collapsible-header"><i class="fa fa-angle-down" aria-hidden="true"></i>Оформление групп соц. сетей</div>
                             <div class="collapsible-body">
                                 <p class="light">Создание комплекса визуальных элементов для оформления сообщества в социальной сети. &nbsp;
-                                    <a class="blue-text" href="ru/services?i=f_33"><i class="fa fa-external-link fa-1x" aria-hidden="true"></i></a></p>
+                                    <a class="blue-text" href="ru/services?i=f_33"><i class="fa fa-external-link fa-1x" aria-hidden="true"></i></a>
+                                </p>
                             </div>
                         </li>
                     </ul>
                 </div>
             </div>
-
-
-
-
-
 
         </div>
         <!-- конец контейнера "section" -->
@@ -327,10 +319,7 @@
         <br>
     </div>
 
-
     <div class="divider"></div>
-
-
 
     <!-------- ВОЗНИКЛИ ВОПРОСЫ? -------->
     <div class="row white lighten-5 grey-text text-darken-4">
@@ -347,7 +336,6 @@
             <button class="btn-large blue white-text" data-target="callback"><i class="fa fa-phone" aria-hidden="true"></i> Обратный звонок</button>
         </div>
 
-
         <!--<div class="col s12 center">
         <h5 class="light">Или позвоните нам:</h5>
     </div>
@@ -360,23 +348,12 @@
 
     <!-------- КОНЕЦ ВОПРОСЫ -------->
 
-
-
-
-
-
-
-
-
-
     <div id="gallery" class="row">
         <!-------- НАШИ РАБОТЫ -------->
         <div class="row" style="height:100px;"></div>
         <h4 class="col s12 light center">Наши работы</h4>
         <div class="row" style="height:100px;"></div>
         <div class="row container">
-
-
 
             <div class="col s12 m6 l4">
                 <div class="card hoverable">
@@ -469,15 +446,6 @@
     </div>
     <!-------- КОНЕЦ НАШИ РАБОТЫ -------->
 
-
-
-
-
-
-
-
-
-
     <div class="divider"></div>
     <!-------- КАК ЭТО РАБОТАЕТ -------->
     <div class="row white lighten-5 grey-text text-darken-4">
@@ -518,25 +486,16 @@
                 </div>
             </div>
 
-
-
         </div>
 
         <div class="col l2 center">
             <p class=""></p>
         </div>
 
-
-
         <div class="row" style="height:100px;"></div>
         <div class="divider"></div>
     </div>
     <!-------- КОНЕЦ КАК ЭТО РАБОТАЕТ -------->
-
-
-
-
-
 
     <!-- Divider l 100px -->
     <div class="row" style="height: 100px;">
@@ -550,26 +509,19 @@
                     <h5 class="">О нас</h5>
                     <p class="">Команда креативных людей которые любят и хотят делать свою работу.</p>
 
-
-
-
-
-
-                   <div class="row">
+                    <div class="row">
                         <div class="col s6 m4 l4"><img class="responsive-img" src="/images/photo/MZ.jpg"> Михаил Жилевич Основатель</div>
                         <div class="col s6 m4 l4"><img class="responsive-img" src="/images/photo/SK.jpg">Сергей Кочкин Основатель</div>
                     </div>
-
-
-
-
 
                 </div>
                 <div class="col l3 s12">
                     <h5 class="grey-text text-darken-4">Ссылки</h5>
                     <ul>
-                        <li><a class="grey-text text-darken-4" href="index.html">Главная</a></li>
-                        <li><a class="grey-text text-darken-4" href="ru/services">Услуги</a></li>
+                        <li><a class="grey-text text-darken-4" href="index.html">Главная</a>
+                        </li>
+                        <li><a class="grey-text text-darken-4" href="ru/services">Услуги</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="col l3 s12">
@@ -577,16 +529,17 @@
                     <ul class="fa-ul">
                         <li class="grey-text text-darken-4"><i class="fa-li fa fa-phone fa-1x"></i>097 005 70 50</li>
                         <li class="grey-text text-darken-4"><i class="fa-li fa fa-phone fa-1x"></i>073 005 70 50</li>
-                        <li class="grey-text text-darken-4"><i class="fa-li fa fa-envelope-o fa-1x"></i><a class="grey-text text-darken-4" href="mailto:hello@wedede.net?subject=Заказ услуг">hello@wedede.net</a></li>
-                        <li class="grey-text text-darken-4 hide-on-med-and-down"><i class="fa-li fa fa-slack fa-1x"></i><a class="grey-text text-darken-4" href="https://wedede.slack.com/messages/hello" target="_blank">wedede.slack</a></li>
-                         <li class="grey-text text-darken-4 hide-on-large-only"><i class="fa-li fa fa-slack fa-1x"></i><a class="grey-text text-darken-4" href=" slack://channel?id=C3UJAG189&team=T2GB9BRK7" target="_blank">wedede.slack</a></li>
+                        <li class="grey-text text-darken-4"><i class="fa-li fa fa-envelope-o fa-1x"></i><a class="grey-text text-darken-4" href="mailto:hello@wedede.net?subject=Заказ услуг">hello@wedede.net</a>
+                        </li>
+                        <li class="grey-text text-darken-4 hide-on-med-and-down"><i class="fa-li fa fa-slack fa-1x"></i><a class="grey-text text-darken-4" href="https://wedede.slack.com/messages/hello" target="_blank">wedede.slack</a>
+                        </li>
+                        <li class="grey-text text-darken-4 hide-on-large-only"><i class="fa-li fa fa-slack fa-1x"></i><a class="grey-text text-darken-4" href=" slack://channel?id=C3UJAG189&team=T2GB9BRK7" target="_blank">wedede.slack</a>
+                        </li>
                         <li class="grey-text text-darken-4"><i class="fa-li fa fa-map-marker fa-1x"></i>Ukraine</li>
 
                     </ul>
                 </div>
             </div>
-
-
 
         </div>
 
@@ -605,7 +558,6 @@
                     <a class="grey-text text-darken-4" href="https://vk.com/wededenet" target="_blank"><i class="fa fa-vk fa-3x" aria-hidden="true"></i></a>
                 </div>
 
-
                 <div class="col l3 s3 center">
                     <a class="grey-text text-darken-4" href="https://www.instagram.com/wededenet/" target="_blank"><i class="fa fa-instagram fa-3x" aria-hidden="true"></i></a>
                 </div>
@@ -616,12 +568,10 @@
             </div>
         </div>
 
-
         <!-- Divider m 50px -->
         <div class="row" style="height: 50px;">
             <div class="col s12"></div>
         </div>
-
 
         <div class="footer-copyright">
             <div class="container grey-text text-darken-4">
@@ -631,11 +581,6 @@
         </div>
 
     </footer>
-
-
-
-
-
 
 </body>
 
