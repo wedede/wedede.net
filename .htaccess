@@ -5,7 +5,20 @@ RewriteRule . %1 [R=301,L,E=NS:1,QSA]
 
 
 RewriteRule ^ru$ index-ru.html
-RewriteRule ^eng$ index-eng.html
+RewriteRule ^eng$ index-en.html
 
 RewriteRule ^ru/services$ services-ru.html
-RewriteRule ^eng/services$ services-eng.html
+RewriteRule ^eng/services$ services-en.html
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpg "access plus 1 week»
+  ExpiresByType image/svg "access plus 1 week»
+  ExpiresByType image/jpeg "access plus 1 week»
+  ExpiresByType image/gif "access plus 1 week"
+  ExpiresByType image/png "access plus 1 week»
+  ExpiresByType text/css "access plus 1 week»
+  ExpiresByType text/x-javascript "access plus 1 week»
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresDefault "access plus 7 days"
+</IfModule>

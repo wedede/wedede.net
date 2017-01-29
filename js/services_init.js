@@ -56,7 +56,8 @@
           $('#'+$(this).attr('target')+'_field').show().addClass('animated fadeIn');
           
           $('#main_feature').remove();
-          $('#summary').prepend("<div class='col s12' id='main_feature'><h6 class='feature'>"+$(this).children('span').html()+"<span class='right'><span class='amount'>"+$(this).data('price')+"</span> грн.</span></h6></div>");
+            console.log($(this));
+          $('#summary').prepend("<div class='col s12' id='main_feature'><h6 class='feature'>"+$(this).children('div').children('span').html()+"<span class='right'><span class='amount'>"+$(this).data('price')+"</span> грн.</span></h6></div>");
 
 
 
