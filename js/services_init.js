@@ -56,7 +56,6 @@
           $('#'+$(this).attr('target')+'_field').show().addClass('animated fadeIn');
           
           $('#main_feature').remove();
-            console.log($(this));
           $('#summary').prepend("<div class='col s12' id='main_feature'><h6 class='feature'>"+$(this).children('div').children('span').html()+"<span class='right'><span class='amount'>"+$(this).data('price')+"</span> грн.</span></h6></div>");
 
 
@@ -173,7 +172,6 @@ function calculate()
          data['contact']=$('#email').val();
 
 
-          console.log(data);
           Materialize.toast('Отправка заказа...',60000);
 
           $.post( "/mail.php", { jsonData: JSON.stringify(data)})
@@ -181,7 +179,6 @@ function calculate()
 		{	
 			$('.toast').remove(); 
               
-             console.log(returned_data);
 
 			if(returned_data.result=='sended') 
 			{	
@@ -199,7 +196,6 @@ function calculate()
 		.fail(function() 
 		{
 			Materialize.toast('Ошибка отправки', 4000);
-            console.log(returned_data);
 		})
       });
       
