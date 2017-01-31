@@ -11,23 +11,15 @@
     <title>Wedede - Услуги</title>
     <link href="favicon.png" rel="shortcut icon" type="image/png">
 
-    <!-- CSS  -->
+   <!-- CSS  -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic" rel="stylesheet">
-    <link href="/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
-    <link href="/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
-    <link rel="stylesheet" href="/font-asesome/css/font-awesome.css">
-    <link rel="stylesheet" href="/css/animate.css">
-
-    <!--  Scripts-->
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="/js/materialize.js"></script>
-    <script src="/js/services_init.js"></script>
-
-    <script src="/js/wow.min.js"></script>
-    <script>
-        new WOW().init();
-    </script>
-
+    <link href="/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="/css/style.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link rel="stylesheet" href="/font-asesome/css/font-awesome.min.css">
+    
+    <!--  jquery -->
+    <script async id="jquery"  src="/js/jquery-2.1.1.min.js"></script>
+    
 </head>
 
 
@@ -101,7 +93,7 @@
         <div class="col s12 m6 l3 center">
             <div class="card-panel z-depth-1 hoverable white" target='landing' id='landing_button' data-price='3000'>
                 <div class="hide-on-small-only">
-                <img  src="images/landingpage.svg"><br>
+                <img  src="/images/landingpage.svg"><br>
                 <span class="grey-text text-darken-4">Посадочная страница
                 </span>
                 </div>
@@ -113,7 +105,7 @@
 
         <div class="col s12 m6 l3 center">
             <div class="card-panel z-depth-1 hoverable white" target='site' id='site_button' data-price='5000'><div class="hide-on-small-only">
-                <img  src="images/promosite.svg"><br>
+                <img  src="/images/promosite.svg"><br>
                 <span class="grey-text text-darken-4">Сайт визитка
                 </span>
                 </div>
@@ -125,7 +117,7 @@
 
         <div class="col s12 m6 l3 center">
             <div class="card-panel z-depth-1 hoverable white" target='e_commerce' id='e_commerce_button' data-price='8000'><div class="hide-on-small-only">
-                <img  src="images/webstore.svg"><br>
+                <img  src="/images/webstore.svg"><br>
                 <span class="grey-text text-darken-4">Интернет магазин
                 </span>
                 </div>
@@ -137,7 +129,7 @@
 
         <div class="col s12 m6 l3 center">
             <div class="card-panel z-depth-1 hoverable white" target='other' id='other_button' data-price='0'><div class="hide-on-small-only">
-                <img  src="images/rectangle.svg"><br>
+                <img  src="/images/rectangle.svg"><br>
                 <span class="grey-text text-darken-4">Прочее
                 </span>
                 </div>
@@ -430,9 +422,29 @@
                 <a class="grey-text text-darken-4 right">&copy; 2017</a>
             </div>
         </div>
-
     </footer>
-
+  <!--  Google Analytics & other scripts-->
+    <script>
+     (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-91060292-1', 'auto');
+        ga('send', 'pageview');
+        
+        document.getElementById('jquery').addEventListener('load',function() 
+        {
+           $.getScript("/js/materialize.min.js",function(){$.getScript("/js/services_init.min.js");});     
+        });
+ 
+    </script>
 
 
 

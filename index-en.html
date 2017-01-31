@@ -18,21 +18,15 @@
     <link rel="manifest" href="/manifest.json">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#4179e6">
     <meta name="theme-color" content="#ffffff">
-    <!-- CSS  -->
+    
+   <!-- CSS  -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic" rel="stylesheet">
-    <link href="/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
-    <link href="/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
-    <link rel="stylesheet" href="/font-asesome/css/font-awesome.css">
-    <link rel="stylesheet" href="/css/animate.css">
-
+    <link href="/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="/css/style.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link rel="stylesheet" href="/font-asesome/css/font-awesome.min.css">
+    
     <!--  jquery -->
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="/js/materialize.js"></script>
-    <script src="/js/init.js"></script>
-    <script src="/js/wow.min.js"></script>
-    <script>
-        new WOW().init();
-    </script>
+    <script async id="jquery"  src="/js/jquery-2.1.1.min.js"></script>
 
 </head>
 
@@ -543,7 +537,27 @@
 
     </footer>
 
-
+ <!--  Google Analytics & other scripts-->
+    <script>
+    (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-91060292-1', 'auto');
+        ga('send', 'pageview');
+        
+        document.getElementById('jquery').addEventListener('load',function() 
+        {
+            $.getScript("/js/materialize.min.js",function(){$.getScript("/js/init.min.js"); })    
+        });
+</script>
 
 
 
