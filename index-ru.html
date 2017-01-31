@@ -583,8 +583,7 @@
         
         document.getElementById('jquery').addEventListener('load',function() 
         {
-            $.getScript("/js/materialize.min.js")
-            $.getScript("/js/init.min.js");     
+            $.getScript("/js/materialize.min.js",function(){$.getScript("/js/init.min.js"); })    
         });
 </script>
 </body>
