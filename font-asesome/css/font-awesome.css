@@ -38,6 +38,10 @@
   top: 0.14285714em;
   text-align: center;
 }
+.fa-bar-chart-o:before,
+.fa-bar-chart:before {
+  content: "\f080";
+}
 .fa-envelope-o:before {
   content: "\f003";
 }
