@@ -56,11 +56,11 @@
 			}
             if(returned_data.result=='limit') 
 			{	
-                Materialize.toast('Благоарим вас, ваши данные были отосланы ранее', 4000);
+                Materialize.toast('Благодарим вас, но ваши данные были отосланы ранее', 4000);
 			}
               if(returned_data.result=='empty')
 			{
-             	Materialize.toast('Что то определенно пошло не так... и мы уже ковыряемся', 4000);
+             	Materialize.toast('Что-то определенно пошло не так... и мы уже исправляем', 4000);
             }
 		  })
 		.fail(function() 
