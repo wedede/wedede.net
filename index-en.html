@@ -1,76 +1,42 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="keywords" content="Создание, раскрутка, поддержка, сайт, CEO, CMM, CRM, Украина">
     <meta name="description" content="Содержимое мета-тега «description»">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
-    <meta name=“robots” content=“noindex,nofollow”/>
+    <meta name=“robots” content=“index,follow”/>
     <META NAME="AUTHOR" content="www.wedede.net" />
-    <title>Wedede - создание и раскрутка сайтов</title>
-    <link href="favicon.png" rel="shortcut icon" type="image/png">
 
+    <title>Wedede - Web Design and Development</title>
+
+    <link href="favicon.png" rel="shortcut icon" type="image/png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#4179e6">
+    <meta name="theme-color" content="#ffffff">
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic" rel="stylesheet">
-    <link href="/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
     <link href="/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
     <link rel="stylesheet" href="/font-asesome/css/font-awesome.css">
-    <link rel="stylesheet" href="/css/animate.min.css">
+    <link rel="stylesheet" href="/css/animate.css">
 
-      <!--  Scripts-->
-    <script async src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script async src="/js/materialize.min.js"></script>
+    <!--  jquery -->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="/js/materialize.js"></script>
+    <script src="/js/init.js"></script>
+    <script src="/js/wow.min.js"></script>
     <script>
-        (function(i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function() {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-        ga('create', 'UA-91060292-1', 'auto');
-        ga('send', 'pageview');
+        new WOW().init();
     </script>
+
 </head>
 
-
 <body class="grey lighten-5 grey-text text-darken-4">
-
-
-
-    <!-- Modal окно для обратного звонка -->
-  <div id="callback" class="modal">
-    <div class="modal-content">
-      <h4></h4>
-      <p>Укажате ваш email или номер телефона</p>
-          <div class="row">
-    <form class="col s12">
-      <div class="row">
-        <div class="input-field col s6">
-
-          <input id="callback_email" type="email" class="validate" required="">
-          <label for="callback_email" data-error="Указан неправильный адрес" data-success="" >Email</label>
-        </div>
-
-        <div class="input-field col s6">
-
-          <input id="callback_phone" name="phone" type="tel" pattern="[0-9+]{6,13}" class="validate" required="" placeholder="+"><label data-error="Номер телtфона должен начинаться с + и состоять о из цифр" for="callback_phone">номер телефона</label>
-        </div>
-      </div>
-    </form>
-  </div>
-    </div>
-    <div class="modal-footer">
-      <button type="submit" class="modal-action  btn-flat" id="send_callback">Send</button>
-    </div>
-  </div>
-
-
 
     <nav class="white z-depth-0" role="navigation">
         <div class="nav-wrapper container">
@@ -286,34 +252,24 @@
     <div class="divider"></div>
 
 
-
-    <!-------- ВОЗНИКЛИ ВОПРОСЫ? -------->
     <div class="row white lighten-5 grey-text text-darken-4">
         <div class="row" style="height:50px;"></div>
         <div class="row container">
             <h4 class="col s12 light center">Do you have any questions?</h4>
 
             <div class="col s12 l6 center offset-l3">
-                <p class="light">Закажите обратный звонок или укажите e-mail и мы проконсультируем вас в ближайшие время</p>
+                <p class="light">Email us any time</p>
             </div>
         </div>
 
         <div class="col s12 center">
-            <button class="btn-large blue white-text" data-target="callback"><i class="fa fa-phone" aria-hidden="true"></i> Обратный звонок</button>
+            <button class="btn-large blue white-text" href="mailto:hello@wedede.net?subject=Order project"><i class="fa-li fa fa-envelope-o fa-1x"></i>hello@wedede.net</button>
         </div>
 
-
-        <!--<div class="col s12 center">
-        <h5 class="light">Или позвоните нам:</h5>
-    </div>
-     <div class="center">
-        <h4><a class="grey lighten-5 grey-text text-darken-4" href="tel:+380970057050">+38 (097) 005 70 50</a><br><a class="grey lighten-5 grey-text text-darken-4" href="tel:+380730057050">+38 (073) 005 70 50</a></h4>
-    </div> -->
         <div class="row" style="height:100px;"></div>
         <div class="divider"></div>
     </div>
 
-    <!-------- КОНЕЦ ВОПРОСЫ -------->
 
 
 
@@ -325,9 +281,9 @@
 
 
     <div id="gallery" class="row">
-        <!-------- НАШИ РАБОТЫ -------->
+
         <div class="row" style="height:100px;"></div>
-        <h4 class="col s12 light center">Наши работы</h4>
+        <h4 class="col s12 light center">Our clients</h4>
         <div class="row" style="height:100px;"></div>
         <div class="row container">
 
@@ -339,7 +295,7 @@
                         <img src="/images/gallery/irinakochkina-com.png">
                     </div>
                     <div class="card-content">
-                        <p>Персональная посадочная страница для услуг мастера по макияжу</p>
+                        <p>Personal landing page for make-up artist</p>
                     </div>
                     <div class="card-action">
                         <a class="blue-text" href="http://irinakochkina.com" target="_blank">irinakochkina.com</a>
@@ -353,7 +309,7 @@
                         <img src="/images/gallery/beerlogapub-com-ua.png">
                     </div>
                     <div class="card-content">
-                        <p>Персональный сайт визитка гастрономического бара</p>
+                        <p>Promo site for gourmet bar</p>
                     </div>
                     <div class="card-action">
                         <a class="blue-text" href="http://beerlogapub.com.ua" target="_blank">beerlogapub.com.ua</a>
@@ -367,7 +323,7 @@
                         <img src="/images/gallery/antiq-in-ua.png">
                     </div>
                     <div class="card-content">
-                        <p>Интернет-магазин предметов старины и антиквариата.</p>
+                        <p>Online antique and collectibles store</p>
                     </div>
                     <div class="card-action">
                         <a class="blue-text" href="http://antiq.in.ua" target="_blank">antiq.in.ua</a>
@@ -381,7 +337,7 @@
                         <img src="/images/gallery/unitherm-com-ua.png">
                     </div>
                     <div class="card-content">
-                        <p>Посадочная страничка с формой заказа для инженерной компании Unitherm</p>
+                        <p>Landing page for engineering company Unitherm</p>
                     </div>
                     <div class="card-action">
                         <a class="blue-text" href="http://unitherm.com.ua" target="_blank">Unitherm.com.ua</a>
@@ -395,10 +351,10 @@
                         <img src="/images/gallery/anitq-in-ua-auction.png">
                     </div>
                     <div class="card-content">
-                        <p>Система аукционных торгов для посетителей тематических сообществ</p>
+                        <p>Online auction website</p>
                     </div>
                     <div class="card-action">
-                        <a class="blue-text" href="http://antiq.in.ua/auction/" target="_blank">Аукцион</a>
+                        <a class="blue-text" href="http://antiq.in.ua/auction/" target="_blank">Auction</a>
                     </div>
                 </div>
             </div>
@@ -409,7 +365,7 @@
                         <img src="/images/gallery/maestroconsulting-com-ua.png">
                     </div>
                     <div class="card-content">
-                        <p>Сайт визитка компании ресторанного консалтинга Maestro</p>
+                        <p>Promo site of restaurant consulting company Maestro</p>
                     </div>
                     <div class="card-action">
                         <a class="blue-text" href="http://maestroconsulting.com.ua" target="_blank">Maestroconsulting.com.ua</a>
@@ -422,7 +378,7 @@
         <div class="row" style="height:100px;"></div>
 
     </div>
-    <!-------- КОНЕЦ НАШИ РАБОТЫ -------->
+
 
 
 
@@ -434,15 +390,15 @@
 
 
     <div class="divider"></div>
-    <!-------- КАК ЭТО РАБОТАЕТ -------->
+
     <div class="row white lighten-5 grey-text text-darken-4">
         <div class="row" style="height:50px;"></div>
 
         <div class="row">
-            <h4 class="col s12 light center">Как это работает</h4>
+            <h4 class="col s12 light center">How it works</h4>
 
             <div class="center">
-                <p class="light">Следующие шаги помогут лучше понять как будет происходить процесс разработки вашего сайта</p>
+                <p class="light">Next steps will help you better understand how the process works</p>
             </div>
         </div>
 
@@ -451,25 +407,25 @@
             <div id="test" class="col s12 m3 l3 blue-text">
                 <h3 class="thin center">1</h3>
                 <div class="col l12">
-                    <p class="grey-text text-darken-4">Выберите тип проекта или просто оставьте ваши контакты для связи</p>
+                    <p class="grey-text text-darken-4 center">Choose you project type or simply email us.</p>
                 </div>
             </div>
             <div class="col s12 m3 l3 blue-text">
                 <h3 class="thin center">2</h3>
                 <div class="col l12">
-                    <p class="grey-text text-darken-4">Мы связываемся с вами для подтверждения заказа и уточнения всех необходимых предварительных деталей</p>
+                    <p class="grey-text text-darken-4 center">We contact you to verify your order and all necessary details.</p>
+                </div>
+            </div>
+            <div class="col s12 m3 l3 blue-text">
+                <h3 class="thin center">3</h3>
+                <div class="col l12">
+                    <p class="grey-text text-darken-4 center">We are working on your project while updating you about the progress.</p>
                 </div>
             </div>
             <div class="col s12 m3 l3 blue-text">
                 <h3 class="thin center">4</h3>
                 <div class="col l12">
-                    <p class="grey-text text-darken-4">Мы начинаем работу над проектом попутно уведомляя вас о процессе и внося сопуствующие корректировки.</p>
-                </div>
-            </div>
-            <div class="col s12 m3 l3 blue-text">
-                <h3 class="thin center">5</h3>
-                <div class="col l12">
-                    <p class="grey-text text-darken-4">Презентация финальной версии проекта, передача готовых файлов и оплата</p>
+                    <p class="grey-text text-darken-4 center">Final presentation of the project, receiving payment and sending files.</p>
                 </div>
             </div>
 
@@ -486,7 +442,7 @@
         <div class="row" style="height:100px;"></div>
         <div class="divider"></div>
     </div>
-    <!-------- КОНЕЦ КАК ЭТО РАБОТАЕТ -------->
+
 
 
 
@@ -502,8 +458,8 @@
         <div class="container">
             <div id="contacts" class="row">
                 <div class="col l6 s12">
-                    <h5 class="">About</h5>
-                    <p class="">Команда креативных людей которые любят и хотят делать свою работу.</p>
+                    <h5 class="">About us</h5>
+                    <p class="">Our team of creative profesionals that love what they do</p>
 
 
 
@@ -511,9 +467,9 @@
 
 
                    <div class="row">
-                        <div class="col s4 m4 l4"><img class="responsive-img" src="/images/photo/MZ.jpg"> Michael Z Founder</div>
-                        <div class="col s4 m4 l4"><img class="responsive-img" src="/images/photo/SK.jpg">Sergey Kochkin Founder</div>
-                       <div class="col s4 m4 l4"><img class="responsive-img" src="/images/photo/SK.jpg">Andrew Kochkin</div>
+                        <div class="col s4 m4 l4"><img class="responsive-img" src="/images/photo/MZ.jpg"> Michael Zhylevych<br>Founder</div>
+                        <div class="col s4 m4 l4"><img class="responsive-img" src="/images/photo/SK.jpg">Sergey Kochkin<br>Founder</div>
+                       <div class="col s4 m4 l4"><img class="responsive-img" src="/images/photo/1.jpeg">Andrey Kochkin<br>Co-founder</div>
                     </div>
 
 
@@ -593,9 +549,5 @@
 
 
 </body>
-<script async src="/js/init.min.js"></script>
-<script src="/js/wow.min.js"></script>
-  <script>
-        new WOW().init();
-    </script>
+
 </html>
