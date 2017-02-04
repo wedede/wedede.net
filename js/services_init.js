@@ -55,8 +55,20 @@
             //анимация блока
           $('#'+$(this).attr('target')+'_field').show().addClass('animated fadeIn');
           
+          
+          switch($('#currency').text().replace(/\s+/g,' ')) 
+          {
+              case ' грн.' :
+                  var new_main_item="<div class='col s12' id='main_feature'><h6 class='feature'>"+$(this).children('div').children('span').html()+"<span class='right'><span class='amount'>"+$(this).data('price')+"</span>"+$('#currency').text().replace(/\s+/g,' ')+"</span></h6></div>";
+              break;
+              case '$ ':
+                  var new_main_item="<div class='col s12' id='main_feature'><h6 class='feature'>"+$(this).children('div').children('span').html()+"<span class='right'>"+$('#currency').text().replace(/\s+/g,' ')+"<span class='amount'>"+$(this).data('price')+"</span></span></h6></div>";
+              break;
+            
+          }
+          
           $('#main_feature').remove();
-          $('#summary').prepend("<div class='col s12' id='main_feature'><h6 class='feature'>"+$(this).children('div').children('span').html()+"<span class='right'><span class='amount'>"+$(this).data('price')+"</span> грн.</span></h6></div>");
+          $('#summary').prepend(new_main_item);
 
 
 
@@ -92,7 +104,20 @@
           
           if($(this).prop('checked'))
           {
-               $('#optional_features').prepend("<h6 id='feature_"+item_id+"' class='feature'>"+$(this).next('label').text()+"<span class='right'><span class='amount'>"+$(this).data('price')+"</span> грн."+close_button+"</span></h6>");
+               switch($('#currency').text().replace(/\s+/g,' ')) 
+              {
+                case ' грн.' :
+                  var etc_item="<h6 id='feature_"+item_id+"' class='feature'>"+$(this).next('label').text()+"<span class='right'><span class='amount'>"+$(this).data('price')+"</span>"+$('#currency').text().replace(/\s+/g,' ')+" "+close_button+"</span></h6>";
+              break;
+                      
+              case '$ ':
+                  var etc_item="<h6 id='feature_"+item_id+"' class='feature'>"+$(this).next('label').text()+"<span class='right'>"+$('#currency').text().replace(/\s+/g,' ')+" <span class='amount'>"+$(this).data('price')+"</span>"+close_button+"</span></h6>";
+              break;
+            
+          }
+          
+              
+               $('#optional_features').prepend(etc_item);
                $('#feature_'+item_id).addClass('animated flipInX').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () 
                {
                     $('#feature_'+item_id).removeClass('animated flipInX');
