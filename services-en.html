@@ -18,7 +18,8 @@
     <link rel="stylesheet" href="/font-asesome/css/font-awesome.min.css">
     
     <!--  jquery -->
-    <script async id="jquery"  src="/js/jquery-2.1.1.min.js"></script>
+    <!--<script async id="jquery"  src="/js/jquery-2.1.1.min.js"></script>-->
+    <script src="/js/jquery-2.1.1.min.js"></script>
     
 </head>
 
@@ -52,7 +53,7 @@
 
 
             <ul class="right hide-on-med-and-down">
-                <li><a href="/eng" class="grey-text text-darken-4">Main</a></li>
+                <li><a href="/en" class="grey-text text-darken-4">Main</a></li>
                 <li><a href="/#gallery" class="grey-text text-darken-4">Gallery</a></li>
                 <li><a href="#contacts" class="grey-text text-darken-4 jump">Contacts</a></li>
             </ul>
@@ -341,7 +342,7 @@
                     <h5 class="grey-text text-darken-4">Links</h5>
                     <ul>
                         <li><a class="grey-text text-darken-4" href="/">Main</a></li>
-                        <li><a class="grey-text text-darken-4" href="/eng/services">Services</a></li>
+                        <li><a class="grey-text text-darken-4" href="/en/services">Services</a></li>
 
                     </ul>
                 </div>
@@ -418,15 +419,15 @@
         ga('create', 'UA-91060292-1', 'auto');
         ga('send', 'pageview');
         
-        document.getElementById('jquery').addEventListener('load',function() 
-        {
-           $.getScript("/js/materialize.min.js",function(){$.getScript("/js/services_init.min.js");});     
-        });
+        //document.getElementById('jquery').addEventListener('load',function()
+        //{
+        //   $.getScript("/js/materialize.min.js",function(){$.getScript("/js/services_init.min.js");});
+        //});
  
     </script>
 
-
-
+    <script src="/js/materialize.min.js"></script>
+    <script src="/js/services_init.min.js"></script>
 </body>
 
 </html>

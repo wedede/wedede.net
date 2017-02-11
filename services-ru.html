@@ -26,7 +26,8 @@
     <link rel="stylesheet" href="/font-asesome/css/font-awesome.min.css">
     
     <!--  jquery -->
-    <script async id="jquery"  src="/js/jquery-2.1.1.min.js"></script>
+    <!--<script async id="jquery"  src="/js/jquery-2.1.1.min.js"></script>-->
+    <script src="/js/jquery-2.1.1.min.js"></script>
 
 </head>
 
@@ -416,12 +417,14 @@
         ga('create', 'UA-91060292-1', 'auto');
         ga('send', 'pageview');
         
-        document.getElementById('jquery').addEventListener('load',function() 
-        {
-           $.getScript("/js/materialize.min.js",function(){$.getScript("/js/services_init.min.js");});     
-        });
+       // document.getElementById('jquery').addEventListener('load',function()
+    //    {
+      //     $.getScript("/js/materialize.min.js",function(){$.getScript("/js/services_init.min.js");});
+    //    });
  
     </script>
+    <script src="/js/materialize.min.js"></script>
+    <script src="/js/services_init.min.js"></script>
 </body>
 
 </html>
